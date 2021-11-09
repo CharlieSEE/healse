@@ -1,0 +1,57 @@
+@import "../css/colors.css";
+
+.landingPage {
+  background-color: var(--secondary-color);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.roundedBackground {
+  background-color: var(--primary-color);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  clip-path: ellipse(90% 100% at 50% 0%);
+}
+
+.title {
+  padding: 0.5em;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+.description {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 18px;
+  line-height: 21px;
+}
+.detailSections {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.buttonSignUp,
+.buttonLogin {
+  justify-content: center;
+  margin: 1em 0;
+  padding: 2em;
+  text-align: center;
+  color: var(--primary-text-color);
+  width: 75%;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: unset;
+}
+.buttonLogin {
+  background-color: var(--accent-color-2);
+  border: 0.1em solid var(--accent-color-2);
+}
+.buttonSignUp {
+  background-color: var(--accent-color-1);
+}
