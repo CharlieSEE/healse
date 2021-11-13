@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/LandingPage.css";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -21,8 +22,13 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <button className="buttonSignUp">Sign up</button>
-      <button className="buttonLogin">Login</button>
+      {/* TODO FIX bo button spierdala */}
+      <Link to="signup">
+        <button className="buttonSignUp">Sign up</button>
+      </Link>
+      <Link to="login">
+        <button className="buttonLogin">Login</button>
+      </Link>
     </div>
   );
 };
