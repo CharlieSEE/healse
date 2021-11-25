@@ -1,0 +1,66 @@
+@import "../css/colors.css";
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600;700&display=swap');
+.signUpPage {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+.title {
+  width: 70vw;
+  max-width: 370px;
+  font-family: 'Red Hat Display', sans-serif; 
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.inputField {
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  margin: 1em;
+  padding: 0.1em 0 0.1em 0.3em;
+  width: 70vw;
+  max-width: 370px;
+  line-height: 2.2em;
+  font-size: 1em;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.inputField:focus {
+  border-color: var(--button-color-hover);
+}
+.confirmationField {
+  margin-bottom: 0.3em;
+}
+.confirmationInfo {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.7em;
+  width: 70vw;
+  max-width: 370px;
+  text-align: left;
+  font-size: 0.7em;
+  color: var(--primary-text-color);
+  opacity: 60%;
+}
+.btn {
+  justify-content: center;
+  border-radius: 10px;
+  border: 0.1em solid var(--button-color);
+  margin-top: 2em;
+  padding: 0.1em;
+  width: 70vw;
+  max-width: 370px;
+  line-height: 1.5em;
+  font-size: 2em;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--button-color-hover);
+  border-color: var(--button-color-hover);
+}
