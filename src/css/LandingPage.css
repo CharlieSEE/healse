@@ -62,12 +62,13 @@ section {
 .buttonSignUp,
 .buttonLogin {
   justify-content: center;
-  /* margin: 1em 0; */
   padding: 0.1em;
   text-align: center;
   width: 70vw;
   max-width: 370px;
   font-size: 2em;
+  font-family: inherit;
+  font-weight: 600;
   line-height: 1.5em;
   display: flex;
   align-items: center;
