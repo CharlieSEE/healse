@@ -1,5 +1,4 @@
 @import "../css/colors.css";
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600;700&display=swap');
 .signUpPage {
   display: flex;
   flex-flow: column;
@@ -9,9 +8,8 @@
 .title {
   width: 70vw;
   max-width: 370px;
-  font-family: 'Red Hat Display', sans-serif; 
   font-size: 1.3em;
-  font-weight: bold;
+  font-weight: 700;
 }
 .inputField {
   border-radius: 10px;
@@ -25,7 +23,7 @@
   max-width: 370px;
   line-height: 2.2em;
   font-size: 1em;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: inherit;
 }
 .inputField:focus {
   border-color: var(--button-color-hover);
@@ -54,8 +52,8 @@
   max-width: 370px;
   line-height: 1.5em;
   font-size: 2em;
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: bold;
+  font-family: inherit;
+  font-weight: 600;
   color: var(--secondary-text-color);
   background-color: var(--button-color);
   cursor: pointer;
