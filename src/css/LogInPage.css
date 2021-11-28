@@ -1,17 +1,23 @@
 @import "../css/colors.css";
-.signUpPage {
+.logInPage {
   display: flex;
   flex-flow: column;
+  justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
 }
-.signUpTitle {
+.logInTitle {
   width: 70vw;
   max-width: 370px;
-  font-size: 1.3em;
+  font-size: 2em;
   font-weight: 700;
+  line-height: 0.5em;
+
 }
-.signUpInputField {
+.logInTitle div {
+  display: inline;
+}
+.logInInputField {
   border-radius: 10px;
   border: 2px solid var(--primary-color);
   -webkit-transition: 0.5s;
@@ -25,24 +31,11 @@
   font-size: 1em;
   font-family: inherit;
 }
-.signUpInputField:focus {
+.logInInputField:focus, .loginForm  {
   border-color: var(--button-color-hover);
 }
-.confirmationField {
-  margin-bottom: 0.3em;
-}
-.confirmationInfo {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 0.7em;
-  width: 70vw;
-  max-width: 370px;
-  text-align: left;
-  font-size: 0.7em;
-  color: var(--primary-text-color);
-  opacity: 60%;
-}
-.signUpForm input[type="submit"] {
+
+.logInForm input[type="submit"] {
   justify-content: center;
   border-radius: 10px;
   border: 0.1em solid var(--button-color);
@@ -58,7 +51,7 @@
   background-color: var(--button-color);
   cursor: pointer;
 }
-.signUpForm input[type="submit"]:hover {
+.logInForm input[type="submit"]:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
 }
