@@ -1,4 +1,7 @@
 @import "../css/colors.css";
+
+/* Logo anim */
+
 .landingPage {
   background-color: var(--primary-color);
 }
@@ -59,6 +62,11 @@ section {
 .signingSection a {
   margin: 1em 0;
 }
+.landingPageLogo {
+  width: 35%;
+  height: 35%;
+}
+
 .buttonSignUp,
 .buttonLogin {
   justify-content: center;
