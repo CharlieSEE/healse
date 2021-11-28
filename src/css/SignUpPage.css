@@ -5,13 +5,13 @@
   align-items: center;
   background-color: var(--secondary-color);
 }
-.title {
+.signUpTitle {
   width: 70vw;
   max-width: 370px;
   font-size: 1.3em;
   font-weight: 700;
 }
-.inputField {
+.signUpInputField {
   border-radius: 10px;
   border: 2px solid var(--primary-color);
   -webkit-transition: 0.5s;
@@ -25,7 +25,7 @@
   font-size: 1em;
   font-family: inherit;
 }
-.inputField:focus {
+.signUpInputField:focus {
   border-color: var(--button-color-hover);
 }
 .confirmationField {
@@ -42,7 +42,7 @@
   color: var(--primary-text-color);
   opacity: 60%;
 }
-.btn {
+.signUpForm input[type="submit"] {
   justify-content: center;
   border-radius: 10px;
   border: 0.1em solid var(--button-color);
@@ -58,7 +58,7 @@
   background-color: var(--button-color);
   cursor: pointer;
 }
-.btn:hover {
+.signUpForm input[type="submit"]:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
 }
