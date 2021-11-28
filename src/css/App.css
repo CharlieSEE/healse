@@ -18,3 +18,7 @@ a:visited {
   color: var(--primary-text-color);
   background-color: var(--primary-color);
 }
+
+.blueText {
+  color: var(--primary-color);
+}
