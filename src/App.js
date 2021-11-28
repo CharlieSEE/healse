@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import LandingPage from "./components/LandingPage";
 import ErrorPage from "./components/ErrorPage";
 import SignUpPage from "./components/SignUpPage";
+import LogInPage from "./components/LogInPage";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <LandingPage />
+            </Route>
+            <Route path="/login">
+              <LogInPage />
             </Route>
             <Route path="/signup">
               <SignUpPage />
