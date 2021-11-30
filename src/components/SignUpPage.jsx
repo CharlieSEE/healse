@@ -33,7 +33,15 @@ const SignUpPage = () => {
 
   return (
     <div className="signUpPage">
-      <h1 className="signUpTitle">Create your Healse Account</h1>
+      <h1 className="signUpTitle">
+        <div>
+          Create your
+        </div>
+        <div>
+          <span className="blueText"> Healse </span>
+          Account
+        </div>
+      </h1>
       <form className="signUpForm" onSubmit={validateData}>
         <input
           type="email"
@@ -61,6 +69,9 @@ const SignUpPage = () => {
           className="signUpInputField"
           onChange={(e) => setUserPasswordConfirmation(e.target.value)}
           value={userPasswordConfirmation}
+
+          className="signUpInputField confirmationField"
+
           placeholder="Confirm"
         />
         {wrongInput ? (

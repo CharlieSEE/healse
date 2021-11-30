@@ -8,8 +8,9 @@
 .signUpTitle {
   width: 70vw;
   max-width: 370px;
-  font-size: 1.3em;
+  font-size: 2em;
   font-weight: 700;
+  line-height: 1.2em;
 }
 .signUpInputField {
   border-radius: 10px;
@@ -29,7 +30,7 @@
   border-color: var(--button-color-hover);
 }
 .confirmationField {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.2em;
 }
 .confirmationInfo {
   display: inline-block;

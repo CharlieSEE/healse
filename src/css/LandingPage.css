@@ -58,9 +58,10 @@ section {
 }
 .signingSection {
   background-color: var(--secondary-color);
+  padding-top: 2em;
 }
 .signingSection a {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 .landingPageLogo {
   width: 35%;

@@ -25,11 +25,13 @@ const LogInPage = () => {
   return (
     <div className="logInPage">
       <h1 className="logInTitle">
-        Log into your
         <div>
-          <p className="blueText">Healse</p>
+          Log into your
         </div>
-        Account
+        <div>
+          <span className="blueText"> Healse </span>
+          Account
+        </div>
       </h1>
 
       <form className="logInForm" onSubmit={login}>
