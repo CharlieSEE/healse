@@ -54,7 +54,7 @@ const SignUpPage = () => {
         <div className="confirmationInfo">
           Use 8 or more characters with a mix of letters, numbers & symbols
         </div>
-        <input type="submit" value="Sign in" />
+        <input type="submit" value="Sign up" />
       </form>
     </div>
   );
