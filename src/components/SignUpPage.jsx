@@ -34,9 +34,7 @@ const SignUpPage = () => {
   return (
     <div className="signUpPage">
       <h1 className="signUpTitle">
-        <div>
-          Create your
-        </div>
+        <div>Create your</div>
         <div>
           <span className="blueText"> Healse </span>
           Account
@@ -66,12 +64,9 @@ const SignUpPage = () => {
         />
         <input
           type="password"
-          className="signUpInputField"
+          className="signUpInputField confirmationField"
           onChange={(e) => setUserPasswordConfirmation(e.target.value)}
           value={userPasswordConfirmation}
-
-          className="signUpInputField confirmationField"
-
           placeholder="Confirm"
         />
         {wrongInput ? (
