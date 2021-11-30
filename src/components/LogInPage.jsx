@@ -1,23 +1,24 @@
 import React, { useState } from "react";
-import { useFirebase } from "react-redux-firebase";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 import "../css/LogInPage.css";
 
 const LogInPage = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
-  const firebase = useFirebase();
-
+  const auth = getAuth();
+  const history = useHistory();
   const login = (e) => {
     e.preventDefault();
-    firebase
-      .login({
-        email: userEmail,
-        password: userPassword,
+    signInWithEmailAndPassword(auth, userEmail, userPassword)
+      .then(() => {
+        history.push("/dashboard");
       })
-      .then()
-      .catch((err) => {
-        console.error(err);
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(`${errorCode} ${errorMessage}`);
       });
   };
 
