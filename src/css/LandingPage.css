@@ -8,7 +8,6 @@
 section {
   position: relative;
   align-items: center;
-  min-height: 400px;
   display: flex;
   flex-flow: column;
 }
@@ -53,8 +52,9 @@ section {
 }
 .detailSection {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  margin-left: auto;
+  padding-right: 2em;
 }
 .signingSection {
   background-color: var(--secondary-color);
@@ -70,7 +70,6 @@ section {
 
 .buttonSignUp,
 .buttonLogin {
-  justify-content: center;
   padding: 0.1em;
   text-align: center;
   width: 70vw;
@@ -79,10 +78,7 @@ section {
   font-family: inherit;
   font-weight: 600;
   line-height: 1.5em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
+  border-radius: 0.3em;
   border: unset;
   cursor: pointer;
 }
@@ -101,4 +97,10 @@ section {
 .buttonSignUp:hover {
   color: var(--button-color-hover);
   border-color: var(--button-color-hover);
+}
+@media (min-width: 50em) {
+  .signingSection {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

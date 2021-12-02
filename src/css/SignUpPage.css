@@ -1,7 +1,7 @@
 @import "../css/colors.css";
 .signUpPage {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
 }
@@ -13,8 +13,8 @@
   line-height: 1.2em;
 }
 .signUpInputField {
-  border-radius: 10px;
-  border: 2px solid var(--primary-color);
+  border-radius: 0.6em;
+  border: 0.1em solid var(--primary-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
@@ -44,8 +44,7 @@
   opacity: 60%;
 }
 .signUpForm input[type="submit"] {
-  justify-content: center;
-  border-radius: 10px;
+  border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
   margin-top: 2em;
   padding: 0.1em;
