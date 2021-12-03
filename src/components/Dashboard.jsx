@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
+import StatsList from "./StatsList/StatsList";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -12,7 +13,8 @@ const Dashboard = () => {
   };
   return (
     <div>
-      <h1>Dashboard</h1>
+      <p>chart placeholder</p>
+      <StatsList />
       <button onClick={logOut}>Logout</button>
     </div>
   );
