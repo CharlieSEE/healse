@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import StatsList from "./StatsList/StatsList";
+import "../css/DashboardPage.css";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -12,10 +13,14 @@ const Dashboard = () => {
     });
   };
   return (
-    <div>
-      <p>chart placeholder</p>
-      <StatsList />
-      <button onClick={logOut}>Logout</button>
+    <div className="dashboardPage">
+      <div className="sectionWrapper">
+        <p>chart placeholder</p>
+      </div>
+      <div className="sectionWrapper">
+        <StatsList />
+        <button onClick={logOut}>Logout</button>
+      </div>
     </div>
   );
 };
