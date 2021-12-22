@@ -11,7 +11,7 @@ const Dashboard = () => {
   const history = useHistory();
   const [inputOpen, setInputOpen] = useState(false);
 
-  const handleToggle = () => {
+  const handleToggleInsertMenu = () => {
     setInputOpen(!inputOpen);
   };
   const logOut = () => {
@@ -29,7 +29,7 @@ const Dashboard = () => {
         <StatsList />
         <button onClick={logOut}>Logout</button>
       </div>
-      <button className="plusIconWrapper" onClick={handleToggle}>
+      <button className="plusIconWrapper" onClick={handleToggleInsertMenu}>
         <img src={plusIcon} alt="plus sign" />
       </button>
       <DataInputPanel isOpen={inputOpen} />
