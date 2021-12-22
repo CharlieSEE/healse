@@ -27,7 +27,6 @@ const Dashboard = () => {
         <button onClick={logOut}>Logout</button>
       </div>
       <button className="plusIconWrapper" onClick={handleToggle}>
-        {inputOpen ? "Close" : "Open"}
         <img src={plusIcon} alt="plus sign" />
       </button>
       <ul className={`inputList ${inputOpen ? "showInput" : ""}`}>
