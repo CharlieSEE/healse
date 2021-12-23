@@ -5,6 +5,7 @@ import StatsList from "./StatsList/StatsList";
 import "../css/DashboardPage.css";
 import plusIcon from "../images/plus-icon.png";
 import DataInputPanel from "./DataInputPanel";
+import Chart from "./Chart";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -23,7 +24,7 @@ const Dashboard = () => {
   return (
     <div className="dashboardPage">
       <div className="sectionWrapper">
-        <p>chart placeholder</p>
+        <Chart />
       </div>
       <div className="sectionWrapper">
         <StatsList />
