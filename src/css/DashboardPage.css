@@ -1,76 +1,9 @@
-@import "../css/colors.css";
-
+@import "./colors.css";
 
 .dashboardPage {
-  background-color: #F2F3F7;
+  background-color: #f2f3f7;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2em;
-}
-.sectionWrapper {
-  background-color: var(--secondary-color);
-  min-height: 15rem;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  width: 90vw;
-  box-shadow: 0 0.3em 0.2em 0.1em rgba(0, 0, 0, 0.2);
-}
-.plusIconWrapper {
-  border-radius: 50%;
-  width: 5em;
-  height: 5em;
-  display: flex;
-  position: fixed;
-  right: 1em;
-  bottom: 1em;
-  box-shadow: 0 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.plusIconWrapper img {
-  border-radius: 50%;
-  width: 5em;
-  height: 5em;
-  position: fixed;
-  right: 1em;
-  bottom: 1em;
-}
-.inputList {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 0.8em;
-  background-color: white;
-  border: 0.2rem solid #82ABFF;
-  border-radius: 0.5em 0.5em 0 0.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: fixed;
-  left: 1rem;
-  right: 2.4rem;
-  top: 2rem;
-  bottom: 2.4rem;
-  line-height: 2.2em;
-  font-size: 2rem;
-}
-.inputList li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.showInput {
-  display: none;
-}
-.measurementInputField {
-  border-radius: 0.6em;
-  border: 0.05em solid var(--primary-color);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-  margin: 0.2em 0.5em 0.2em 0.5em;
-  padding: 0 0.3em;
-  width: 55%;
-  font-size: 0.8em;
-  font-family: inherit;
-  text-align: right;
 }

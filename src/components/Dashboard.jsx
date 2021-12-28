@@ -5,8 +5,9 @@ import StatsList from "./StatsList/StatsList";
 import plusIcon from "../images/plus-icon.png";
 import DataInputPanel from "./DataInputPanel";
 import Chart from "./Chart";
-import "../css/DashboardPage.css";
 import SectionWrapper from "./SectionWrapper";
+import DashboardButton from "./DashboardButton";
+import "../css/DashboardPage.css";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -21,10 +22,14 @@ const Dashboard = () => {
       history.push("/");
     });
   };
+  const addData = async (data) => {
+    handleToggleInsertMenu();
+    console.log(data);
+  };
 
   return (
     <div className="dashboardPage">
-      {inputOpen ? <DataInputPanel /> : null}
+      {inputOpen ? <DataInputPanel onSave={addData} /> : null}
       <SectionWrapper>
         <Chart />
       </SectionWrapper>
@@ -32,9 +37,13 @@ const Dashboard = () => {
         <StatsList />
         <button onClick={logOut}>Logout</button>
       </SectionWrapper>
-      <button className="plusIconWrapper" onClick={handleToggleInsertMenu}>
-        <img src={plusIcon} alt="plus sign" />
-      </button>
+      {inputOpen ? null : (
+        <DashboardButton
+          icon={plusIcon}
+          altText="plus sign"
+          action={handleToggleInsertMenu}
+        />
+      )}
     </div>
   );
 };
