@@ -9,6 +9,8 @@ import Chart from "./Chart";
 import SectionWrapper from "./SectionWrapper";
 import DashboardButton from "./DashboardButton";
 import "../css/DashboardPage.css";
+import NextPageButton from "./NextPageButton";
+import PrevPageButton from "./PrevPageButton";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -53,6 +55,40 @@ const Dashboard = () => {
     await setDoc(doc(db, "users", auth.currentUser.uid, "mes", date), data);
     alert("Data added");
   };
+  const dateForwards = () => {
+    let [days, months, years] = date.split("-");
+    days = parseInt(days);
+    months = parseInt(months);
+    years = parseInt(years);
+    if (days < 31) {
+      days++;
+    } else if (days === 31 && months < 12) {
+      days = 1;
+      months++;
+    } else if (days === 31 && months === 12) {
+      days = 1;
+      months = 1;
+      years++;
+    }
+    setDate(`${days}-${months}-${years}`);
+  };
+  const dateBackwards = () => {
+    let [days, months, years] = date.split("-");
+    days = parseInt(days);
+    months = parseInt(months);
+    years = parseInt(years);
+    if (days > 1) {
+      days--;
+    } else if (days === 1 && months > 1) {
+      days = 31;
+      months--;
+    } else if (days === 1 && months === 1) {
+      days = 31;
+      months = 12;
+      years--;
+    }
+    setDate(`${days}-${months}-${years}`);
+  };
 
   return (
     <div className="dashboardPage">
@@ -68,11 +104,23 @@ const Dashboard = () => {
         <button onClick={logOut}>Logout</button>
       </SectionWrapper>
       {inputOpen ? null : (
-        <DashboardButton
-          icon={plusIcon}
-          altText="plus sign"
-          action={handleToggleInsertMenu}
-        />
+        <>
+          <DashboardButton
+            icon={plusIcon}
+            altText="plus sign"
+            action={handleToggleInsertMenu}
+          />
+          <NextPageButton
+            icon={plusIcon}
+            altText="plus sign"
+            action={dateForwards}
+          />
+          <PrevPageButton
+            icon={plusIcon}
+            altText="plus sign"
+            action={dateBackwards}
+          />
+        </>
       )}
     </div>
   );

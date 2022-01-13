@@ -18,23 +18,29 @@ const StatsList = ({ date }) => {
     const auth = getAuth();
     const user = auth.currentUser;
     const db = getFirestore();
+    console.log(date);
     const fetchData = async () => {
-      const date = new Date();
-      const currentDate = `${date.getDate()}-${
-        date.getMonth() + 1
-      }-${date.getFullYear()}`;
-      console.log(date);
-      const docRef = doc(db, "users", user.uid, "mes", currentDate);
+      const docRef = doc(db, "users", user.uid, "mes", date);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setData(docSnap.data());
+      } else {
+        setData({
+          Weight: 0,
+          BMI: 0,
+          BodyFat: 0,
+          Waist: 0,
+          Hip: 0,
+          Chest: 0,
+          Thigh: 0,
+          Biceps: 0,
+        });
       }
     };
     fetchData();
   }, [date]);
   return (
     <>
-      {/* <h3>{date}</h3> */}
       <StatsListElement
         name="Weight"
         icon="icon"
