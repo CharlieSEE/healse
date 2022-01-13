@@ -12,12 +12,12 @@ const DataInputPanel = ({ onSave }) => {
 
   const getInput = () => {
     const data = {
-      weight: weight,
-      waist: waist,
-      hip: hip,
-      chest: chest,
-      thigh: thigh,
-      biceps: biceps,
+      Weight: weight,
+      Waist: waist,
+      Hip: hip,
+      Chest: chest,
+      Thigh: thigh,
+      Biceps: biceps,
     };
     onSave(data);
   };

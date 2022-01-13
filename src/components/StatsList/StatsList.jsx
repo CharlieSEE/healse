@@ -3,7 +3,7 @@ import StatsListElement from "./StatsListElement";
 import { getAuth } from "firebase/auth";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
-const StatsList = () => {
+const StatsList = ({ date }) => {
   const [data, setData] = useState({
     Weight: 0,
     BMI: 0,
@@ -23,6 +23,7 @@ const StatsList = () => {
       const currentDate = `${date.getDate()}-${
         date.getMonth() + 1
       }-${date.getFullYear()}`;
+      console.log(date);
       const docRef = doc(db, "users", user.uid, "mes", currentDate);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
@@ -30,9 +31,10 @@ const StatsList = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [date]);
   return (
     <>
+      {/* <h3>{date}</h3> */}
       <StatsListElement
         name="Weight"
         icon="icon"
