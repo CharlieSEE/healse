@@ -18,9 +18,14 @@ const StatsList = ({ date }) => {
     const auth = getAuth();
     const user = auth.currentUser;
     const db = getFirestore();
+    const defaultDateObj = new Date();
+    const defaultDate = `${defaultDateObj.getDate()}-${
+      defaultDateObj.getMonth() + 1
+    }-${defaultDateObj.getFullYear()}`;
+    const currentDate = date || defaultDate;
     console.log(date);
     const fetchData = async () => {
-      const docRef = doc(db, "users", user.uid, "mes", date);
+      const docRef = doc(db, "users", user.uid, "mes", currentDate);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setData(docSnap.data());
