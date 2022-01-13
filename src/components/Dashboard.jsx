@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
-import { doc, setDoc, getFirestore } from "firebase/firestore";
+import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore";
 import StatsList from "./StatsList/StatsList";
 import plusIcon from "../images/plus-icon.png";
 import DataInputPanel from "./DataInputPanel";
@@ -34,19 +34,24 @@ const Dashboard = () => {
   };
   const addData = async (data) => {
     handleToggleInsertMenu();
+    const auth = getAuth();
+    const user = auth.currentUser;
     const db = getFirestore();
-    // TODO BMI and bodyfat calc
-    // const bmi = (weight / ((height*height)/10000)).toFixed(2);
     const factorOne = data.Weight * 1.082 + 94.42;
     const factorTwo = data.Waist * 4.15;
     const leanBodyMass = factorOne - factorTwo;
     const bodyFatWeight = data.Weight - leanBodyMass;
+    let height = 0;
     data.BodyFat = Math.floor((bodyFatWeight * 100) / data.Weight);
-    //! TMP. DELETE
-    data.BMI = 20;
+    // Getting height
+    const docRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      height = docSnap.data().Height;
+    }
+    data.BMI = (data.Weight / ((height * height) / 10000)).toFixed(2);
     await setDoc(doc(db, "users", auth.currentUser.uid, "mes", date), data);
     alert("Data added");
-    console.log(data);
   };
 
   return (
