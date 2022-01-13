@@ -1,0 +1,9 @@
+@import "./colors.css";
+
+.dashboardPage {
+  background-color: #f2f3f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}

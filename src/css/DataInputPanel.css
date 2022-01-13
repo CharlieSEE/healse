@@ -1,0 +1,31 @@
+@import "./colors.css";
+
+.inputList {
+  text-align: left;
+  position: absolute;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  padding: 0.5rem;
+  margin: 2rem;
+  background-color: #fff;
+  border: 0.2rem solid #82abff;
+  border-radius: 0.5em;
+}
+
+.measurementInputField {
+  border-radius: 0.6em;
+  border: 0.05em solid var(--primary-color);
+  transition: 0.3s;
+  outline: none;
+  font-size: 0.8em;
+  text-align: right;
+  padding: 0.5rem;
+  width: 80%;
+}
+.measurementInputField:focus {
+  border: 0.05em solid black;
+}
