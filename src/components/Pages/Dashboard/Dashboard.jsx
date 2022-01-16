@@ -6,11 +6,11 @@ import StatsList from "./StatsList/StatsList";
 import plusIcon from "../images/plus-icon.png";
 import DataInputPanel from "./DataInputPanel";
 import Chart from "./Chart";
-import SectionWrapper from "./SectionWrapper";
+import SectionWrapper from "../../SectionWrapper";
 import DashboardButton from "./DashboardButton";
 import "../css/DashboardPage.css";
-import NextPageButton from "./NextPageButton";
-import PrevPageButton from "./PrevPageButton";
+import NextPageButton from "../../NextPageButton";
+import PrevPageButton from "../../PrevPageButton";
 
 const Dashboard = () => {
   const auth = getAuth();
