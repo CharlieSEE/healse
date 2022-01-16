@@ -1,0 +1,110 @@
+@import "../../../constants/colors.css";
+
+/* Logo anim */
+
+.landingPage {
+  background-color: var(--primary-color);
+}
+.section {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+.infoWrapper {
+  display: flex;
+  flex-flow: row;
+  flex: 1 4;
+  width: 100%;
+  padding-bottom: 5em;
+}
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.waveDivider svg {
+  position: relative;
+  display: block;
+  width: calc(127% + 1.3px);
+  height: 59px;
+}
+.waveDivider .shapeFill {
+  fill: var(--secondary-color);
+}
+.title {
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+.description {
+  text-align: left;
+  padding: 1em;
+  padding-left: 2em;
+  margin-top: 5em;
+  font-size: 1em;
+  line-height: 21px;
+  width: 30vw;
+}
+.detailSection {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding-right: 2em;
+}
+.signingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--secondary-color);
+  padding-top: 2em;
+}
+.signingSection a {
+  margin: 1.5em 0;
+}
+.landingPageLogo {
+  width: 35%;
+  height: 35%;
+}
+
+.buttonSignUp,
+.buttonLogin {
+  padding: 0.1em;
+  text-align: center;
+  width: 70vw;
+  max-width: 370px;
+  font-size: 2em;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5em;
+  border-radius: 0.3em;
+  border: unset;
+  cursor: pointer;
+}
+.buttonLogin {
+  color: var(--secondary-text-color);
+  background-color: var(--button-color);
+}
+.buttonLogin:hover {
+  background-color: var(--button-color-hover);
+}
+.buttonSignUp {
+  color: var(--button-color);
+  background-color: var(--secondary-color);
+  border: 0.1em solid var(--button-color);
+}
+.buttonSignUp:hover {
+  color: var(--button-color-hover);
+  border-color: var(--button-color-hover);
+}
+@media (min-width: 50em) {
+  .signingSection {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

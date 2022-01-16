@@ -1,0 +1,14 @@
+@import "../../../../constants/colors.css";
+
+.buttonWrapper {
+  z-index: 100;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  display: flex;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  box-shadow: 0 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
