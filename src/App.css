@@ -1,5 +1,5 @@
-@import "./colors.css";
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600;700&display=swap');
+@import "./constants/colors.css";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600;700&display=swap");
 
 a,
 a:active,
@@ -12,7 +12,7 @@ a:visited {
 .App {
   text-align: center;
   font-size: 1.1em;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--primary-text-color);

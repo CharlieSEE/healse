@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { useHistory } from "react-router-dom";
-import "../css/LogInPage.css";
+import styles from "./LogInPage.module.css";
 
 function LogInPage() {
   const [userEmail, setUserEmail] = useState("");
@@ -28,42 +33,46 @@ function LogInPage() {
       .then((result) => {
         console.log(result);
         history.push("/dashboard");
-      }).catch((error) => {
+      })
+      .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.error(`${errorCode} ${errorMessage}`);
       });
-  }
+  };
   return (
-    <div className="logInPage">
-      <h1 className="logInTitle">
+    <div className={styles.logInPage}>
+      <h1 className={styles.logInTitle}>
+        <div>Log into your</div>
         <div>
-          Log into your
-        </div>
-        <div>
-          <span className="blueText"> Healse </span>
+          <span className={styles.blueText}> Healse </span>
           Account
         </div>
       </h1>
 
-      <form className="logInForm" onSubmit={login}>
+      <form className={styles.logInForm} onSubmit={login}>
         <input
           type="email"
-          className="logInInputField"
+          className={styles.logInInputField}
           onChange={(e) => setUserEmail(e.target.value)}
           value={userEmail}
-          placeholder="Email" />
+          placeholder="Email"
+        />
         <input
           type="password"
-          className="logInInputField"
+          className={styles.logInInputField}
           onChange={(e) => setUserPassword(e.target.value)}
           value={userPassword}
-          placeholder="Password" />
+          placeholder="Password"
+        />
         <input type="submit" value="Log in" />
       </form>
-      <button className="login-provider-button" onClick={googleLogin}>
+      <button className={styles.loginProviderButton} onClick={googleLogin}>
         {/* <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="google icon" /> */}
-        <span> Login with <b>Google</b></span>
+        <span>
+          {" "}
+          Login with <b>Google</b>
+        </span>
       </button>
     </div>
   );

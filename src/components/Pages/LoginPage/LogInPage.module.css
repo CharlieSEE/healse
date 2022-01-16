@@ -1,19 +1,20 @@
-@import "../css/colors.css";
-.signUpPage {
+@import "../../../constants/colors.css";
+
+.logInPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
 }
-.signUpTitle {
+.logInTitle {
   width: 70vw;
   max-width: 370px;
   font-size: 2em;
   font-weight: 700;
   line-height: 1.2em;
 }
-.signUpInputField {
-  border-radius: 0.6em;
+.logInInputField {
+  border-radius: 0.5em;
   border: 0.1em solid var(--primary-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -26,27 +27,15 @@
   font-size: 1em;
   font-family: inherit;
 }
-.signUpInputField:focus {
+.logInInputField:focus,
+.loginForm {
   border-color: var(--button-color-hover);
 }
-.confirmationField {
-  margin-bottom: 0.2em;
-}
-.confirmationInfo {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 0.7em;
-  width: 70vw;
-  max-width: 370px;
-  text-align: left;
-  font-size: 0.7em;
-  color: var(--primary-text-color);
-  opacity: 60%;
-}
-.signUpForm input[type="submit"] {
+
+.logInForm input[type="submit"] {
   border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
-  margin-top: 2em;
+  margin-top: 5em;
   padding: 0.1em;
   width: 70vw;
   max-width: 370px;
@@ -58,7 +47,26 @@
   background-color: var(--button-color);
   cursor: pointer;
 }
-.signUpForm input[type="submit"]:hover {
+.logInForm input[type="submit"]:hover {
+  background-color: var(--button-color-hover);
+  border-color: var(--button-color-hover);
+}
+.loginProviderButton {
+  border-radius: 0.3em;
+  border: 0.1em solid var(--button-color);
+  margin-top: 2em;
+  padding: 0.1em;
+  width: 70vw;
+  max-width: 370px;
+  line-height: 1.5em;
+  font-size: 2em;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--button-color);
+  background-color: var(--secondary-text-color);
+  cursor: pointer;
+}
+.loginProviderButton:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
 }

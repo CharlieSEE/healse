@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../css/DataInputPanel.css";
-import DashboardButton from "./DashboardButton";
+import DashboardButton from "../DashboardButton/DashboardButton";
+import styles from "./DataInputPanel.module.css";
 
 const DataInputPanel = ({ onSave }) => {
   const [weight, setWeight] = useState("");
@@ -24,11 +24,11 @@ const DataInputPanel = ({ onSave }) => {
 
   return (
     <>
-      <div className="inputList">
+      <div className={styles.inputList}>
         <div>Weight:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="kg"
           onChange={(e) => setWeight(e.target.value)}
           value={weight}
@@ -36,7 +36,7 @@ const DataInputPanel = ({ onSave }) => {
         <div>Waist:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="cm"
           onChange={(e) => setWaist(e.target.value)}
           value={waist}
@@ -44,7 +44,7 @@ const DataInputPanel = ({ onSave }) => {
         <div>Hip:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="cm"
           onChange={(e) => setHip(e.target.value)}
           value={hip}
@@ -52,7 +52,7 @@ const DataInputPanel = ({ onSave }) => {
         <div>Chest:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="cm"
           onChange={(e) => setChest(e.target.value)}
           value={chest}
@@ -60,7 +60,7 @@ const DataInputPanel = ({ onSave }) => {
         <div>Thigh:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="cm"
           onChange={(e) => setThigh(e.target.value)}
           value={thigh}
@@ -68,7 +68,7 @@ const DataInputPanel = ({ onSave }) => {
         <div>Biceps:</div>
         <input
           type="number"
-          className="measurementInputField"
+          className={styles.measurementInputField}
           placeholder="cm"
           onChange={(e) => setBiceps(e.target.value)}
           value={biceps}

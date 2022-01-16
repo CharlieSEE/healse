@@ -1,4 +1,4 @@
-@import "./colors.css";
+@import "../../../constants/colors.css";
 
 .dashboardPage {
   background-color: #f2f3f7;

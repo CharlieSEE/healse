@@ -3,15 +3,16 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 // Firebase imports
 import { initializeApp } from "firebase/app";
 
+import Layout from "./components/Layout/Layout";
+import PrivateRoute from "./components//Routes/PrivateRoute";
+
 // Page imports
-import Layout from "./components/Layout";
-import LandingPage from "./components/LandingPage";
-import ErrorPage from "./components/ErrorPage";
-import SignUpPage from "./components/SignUpPage";
-import LogInPage from "./components/LogInPage";
-import Dashboard from "./components/Dashboard";
-import PrivateRoute from "./components/PrivateRoute";
-import "./css/App.css";
+import LandingPage from "./components/Pages/LandingPage/LandingPage";
+import ErrorPage from "./components//Pages/ErrorPage/ErrorPage";
+import SignUpPage from "./components/Pages/SignUpPage/SignUpPage";
+import LogInPage from "./components/Pages/LoginPage/LogInPage";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
+import "./App.css";
 
 // Firebase init
 const firebaseConfig = {

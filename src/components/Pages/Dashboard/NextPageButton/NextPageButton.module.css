@@ -1,4 +1,4 @@
-@import "./colors.css";
+@import "../../../../constants/colors.css";
 
 .buttonWrapper {
   z-index: 100;
@@ -12,4 +12,3 @@
   box-shadow: 0 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-

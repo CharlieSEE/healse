@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TopBar from "./TopBar";
+import TopBar from "./Topbar/TopBar";
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false);

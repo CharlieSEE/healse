@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css/SectionWrapper.module.css";
+import styles from "./SectionWrapper.module.css";
 
 const SectionWrapper = ({ children }) => {
   return <div className={styles.sectionWrapper}>{children}</div>;

@@ -1,11 +1,11 @@
-@import "../css/colors.css";
+@import "../../../constants/colors.css";
 
 /* Logo anim */
 
 .landingPage {
   background-color: var(--primary-color);
 }
-section {
+.section {
   position: relative;
   align-items: center;
   display: flex;
@@ -32,7 +32,7 @@ section {
   width: calc(127% + 1.3px);
   height: 59px;
 }
-.waveDivider .shape-fill {
+.waveDivider .shapeFill {
   fill: var(--secondary-color);
 }
 .title {
@@ -57,6 +57,10 @@ section {
   padding-right: 2em;
 }
 .signingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: var(--secondary-color);
   padding-top: 2em;
 }

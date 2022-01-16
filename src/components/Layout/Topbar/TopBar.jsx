@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/TopBar.css";
+import styles from "./TopBar.module.css";
 
 const TopBar = ({ title, toggleSideMenu }) => {
   return (
-    <div className="TopBarWrapper">
+    <div className={styles.Wrapper}>
       <div onClick={toggleSideMenu}>icona</div>
       {title}
     </div>

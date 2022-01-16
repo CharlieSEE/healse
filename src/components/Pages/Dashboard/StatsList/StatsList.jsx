@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import StatsListElement from "./StatsListElement";
 import { getAuth } from "firebase/auth";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import StatsListElement from "./StatsListElement";
 
 const StatsList = ({ date }) => {
   const [data, setData] = useState({

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css/DashboardButton.module.css";
+import styles from "./DashboardButton.module.css";
 
 const DashboardButton = ({ icon, action, altText }) => {
   return (

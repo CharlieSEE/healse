@@ -1,6 +1,6 @@
-@import "../css/colors.css";
+@import "../../../constants/colors.css";
 
-.TopBarWrapper {
+.Wrapper {
   background-color: var(--primary-color);
   color: var(--primary-text-color);
   text-align: center;

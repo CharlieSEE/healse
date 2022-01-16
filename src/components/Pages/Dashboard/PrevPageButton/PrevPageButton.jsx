@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css/PrevPageButton.module.css";
+import styles from "./PrevPageButton.module.css";
 
 const PrevPageButton = ({ icon, action, altText }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
-import "../css/SignUpPage.css";
+import styles from "./SignUpPage.module.css";
 
 const SignUpPage = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -32,49 +32,49 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="signUpPage">
-      <h1 className="signUpTitle">
+    <div className={styles.signUpPage}>
+      <h1 className={styles.signUpTitle}>
         <div>Create your</div>
         <div>
-          <span className="blueText"> Healse </span>
+          <span className={styles.blueText}> Healse </span>
           Account
         </div>
       </h1>
-      <form className="signUpForm" onSubmit={validateData}>
+      <form className={styles.signUpForm} onSubmit={validateData}>
         <input
           type="email"
-          className="signUpInputField"
+          className={styles.signUpInputField}
           onChange={(e) => setUserEmail(e.target.value)}
           value={userEmail}
           placeholder="Email"
         />
         <input
           type="text"
-          className="signUpInputField"
+          className={styles.signUpInputField}
           onChange={(e) => setUserName(e.target.value)}
           value={userName}
           placeholder="Name"
         />
         <input
           type="password"
-          className="signUpInputField"
+          className={styles.signUpInputField}
           onChange={(e) => setUserPassword(e.target.value)}
           value={userPassword}
           placeholder="Password"
         />
         <input
           type="password"
-          className="signUpInputField confirmationField"
+          className={styles.confirmationField}
           onChange={(e) => setUserPasswordConfirmation(e.target.value)}
           value={userPasswordConfirmation}
           placeholder="Confirm"
         />
         {wrongInput ? (
-          <div className="confirmationInfo">
+          <div className={styles.confirmationInfo}>
             Use 8 or more characters with a mix of letters, numbers & symbols
           </div>
         ) : (
-          <div className="confirmationInfo"></div>
+          <div className={styles.confirmationInfo}></div>
         )}
         <input type="submit" value="Sign in" />
       </form>

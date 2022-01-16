@@ -1,4 +1,4 @@
-@import "./colors.css";
+@import "../../../../constants/colors.css";
 
 .buttonWrapper {
   z-index: 100;

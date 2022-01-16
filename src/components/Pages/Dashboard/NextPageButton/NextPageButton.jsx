@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css/NextPageButton.module.css";
+import styles from "./NextPageButton.module.css";
 
 const NextPageButton = ({ icon, action, altText }) => {
   return (

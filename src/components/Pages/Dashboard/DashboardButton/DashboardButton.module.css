@@ -1,4 +1,4 @@
-@import "./colors.css";
+@import "../../../../constants/colors.css";
 
 .plusIconWrapper {
   z-index: 100;

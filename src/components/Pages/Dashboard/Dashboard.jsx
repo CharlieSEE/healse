@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore";
+
+import Chart from "./Chart/Chart";
 import StatsList from "./StatsList/StatsList";
-import plusIcon from "../images/plus-icon.png";
-import DataInputPanel from "./DataInputPanel";
-import Chart from "./Chart";
-import SectionWrapper from "../../SectionWrapper";
-import DashboardButton from "./DashboardButton";
-import "../css/DashboardPage.css";
-import NextPageButton from "../../NextPageButton";
-import PrevPageButton from "../../PrevPageButton";
+import plusIcon from "../../../assets/images/plus-icon.png";
+import DataInputPanel from "./DataInputPanel/DataInputPanel";
+import SectionWrapper from "./SectionWrapper/SectionWrapper";
+import DashboardButton from "./DashboardButton/DashboardButton";
+import NextPageButton from "./NextPageButton/NextPageButton";
+import PrevPageButton from "./PrevPageButton/PrevPageButton";
+
+import styles from "./DashboardPage.module.css";
 
 const Dashboard = () => {
   const auth = getAuth();
@@ -91,7 +93,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboardPage">
+    <div className={styles.dashboardPage}>
       <SectionWrapper>
         <h1>{date}</h1>
       </SectionWrapper>
