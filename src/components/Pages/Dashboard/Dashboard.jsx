@@ -5,7 +5,9 @@ import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore";
 
 import Chart from "./Chart/Chart";
 import StatsList from "./StatsList/StatsList";
-import plusIcon from "../../../assets/images/plus-icon.png";
+import plusIcon from "../../../assets/icons/plus.svg";
+import leftArrow from "../../../assets/icons/arrow_left.svg";
+import rightArrow from "../../../assets/icons/arrow_right.svg";
 import DataInputPanel from "./DataInputPanel/DataInputPanel";
 import SectionWrapper from "./SectionWrapper/SectionWrapper";
 import DashboardButton from "./DashboardButton/DashboardButton";
@@ -22,9 +24,8 @@ const Dashboard = () => {
 
   useEffect(() => {
     const date = new Date();
-    const currentDate = `${date.getDate()}-${
-      date.getMonth() + 1
-    }-${date.getFullYear()}`;
+    const currentDate = `${date.getDate()}-${date.getMonth() + 1
+      }-${date.getFullYear()}`;
     setDate(currentDate);
   }, []);
 
@@ -113,13 +114,13 @@ const Dashboard = () => {
             action={handleToggleInsertMenu}
           />
           <NextPageButton
-            icon={plusIcon}
-            altText="plus sign"
+            icon={rightArrow}
+            altText="right arrow"
             action={dateForwards}
           />
           <PrevPageButton
-            icon={plusIcon}
-            altText="plus sign"
+            icon={leftArrow}
+            altText="left arrow"
             action={dateBackwards}
           />
         </>

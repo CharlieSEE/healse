@@ -3,9 +3,9 @@ import styles from "./DashboardButton.module.css";
 
 const DashboardButton = ({ icon, action, altText }) => {
   return (
-    <button className={styles.plusIconWrapper} onClick={action}>
+    <div className={styles.plusIconWrapper} onClick={action}>
       <img className={styles.plusIconWrapperIcon} src={icon} alt={altText} />
-    </button>
+    </div>
   );
 };
 
