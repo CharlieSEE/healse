@@ -7,8 +7,8 @@
   height: 4em;
   display: flex;
   position: fixed;
-  left: 1em;
-  bottom: 1em;
+  right: 11em;
+  bottom: 0.7em;
   box-shadow: 0 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DashboardButton from "../DashboardButton/DashboardButton";
 import styles from "./DataInputPanel.module.css";
+import plusIcon from "../../../../assets/icons/plus.svg"
 
 const DataInputPanel = ({ onSave }) => {
   const [weight, setWeight] = useState("");
@@ -74,7 +75,11 @@ const DataInputPanel = ({ onSave }) => {
           value={biceps}
         />
       </div>
-      <DashboardButton action={getInput} />
+      <DashboardButton
+        icon={plusIcon}
+        altText="plus sign"
+        action={getInput}
+      />
     </>
   );
 };
