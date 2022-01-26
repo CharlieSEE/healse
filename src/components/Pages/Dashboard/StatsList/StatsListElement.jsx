@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./StatsListElement.module.css";
 
-const StatsListElement = ({ icon, name, change, value }) => {
+const StatsListElement = ({ icon, name, value, altText, unit }) => {
   return (
     <div className={styles.statsListElementWrapper}>
-      <div className={styles.icon}>{icon}</div>
+      <img className={styles.icon} src={icon} alt={altText} />
       <div className={styles.statName}>{name}</div>
-      <div className={styles.statChange}>{change}</div>
-      <div className={styles.statValue}>{value}</div>
+      <div className={styles.statValue}>{`${value} ${unit}`}</div>
     </div>
   );
 };

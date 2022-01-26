@@ -3,23 +3,17 @@
 .statsListElementWrapper {
   display: grid;
   grid-template-columns: 0.5fr 2fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
   align-items: center;
   padding: 1rem;
 }
 .icon {
-  grid-row: 1/3;
   text-align: left;
+  max-height: 3em;
 }
 .statValue {
-  grid-row: 1/3;
   text-align: right;
-}
-.statChange {
-  text-align: left;
-  grid-row: 2/3;
 }
 .statName {
   text-align: left;
-  grid-row: 1/2;
 }
