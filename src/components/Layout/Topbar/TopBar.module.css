@@ -1,11 +1,16 @@
 @import "../../../constants/colors.css";
 
 .Wrapper {
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  display: grid;
+  grid-template-columns: auto 70%;
+  align-items: center;
+}
+.logo{
+  padding: 1rem 0;
+  grid-column: 2/3;
+}
+.menu{
+  grid-column: 1/2;
+  max-height: 3rem;
+  padding: 0.5rem;
 }
