@@ -98,7 +98,7 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboardPage}>
       <SectionWrapper>
-        <h1>{date}</h1>
+        <h1>{`🕒${date}🕒`}</h1>
       </SectionWrapper>
       {inputOpen ? (
         <DataInputPanel onSave={addData} onCancel={cancelInput} />
