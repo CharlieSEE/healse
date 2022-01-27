@@ -1,6 +1,6 @@
 @import "../../../../constants/colors.css";
 
-.plusIconWrapper {
+.wrapper {
   z-index: 100;
   border-radius: 50%;
   width: 4em;

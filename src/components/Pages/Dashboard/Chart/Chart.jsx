@@ -44,6 +44,7 @@ const Chart = ({ date }) => {
       console.log(values);
     };
     fetchData();
+    //eslint-disable-next-line
   }, [date]);
   const options = {
     responsive: true,

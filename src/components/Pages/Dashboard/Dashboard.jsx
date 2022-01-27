@@ -10,23 +10,21 @@ import rightArrow from "../../../assets/icons/arrow_right.svg";
 import DataInputPanel from "./DataInputPanel/DataInputPanel";
 import SectionWrapper from "./SectionWrapper/SectionWrapper";
 import DashboardButton from "./DashboardButton/DashboardButton";
-import NextPageButton from "./NextPageButton/NextPageButton";
-import PrevPageButton from "./PrevPageButton/PrevPageButton";
 
 import styles from "./DashboardPage.module.css";
 
 const Dashboard = () => {
   const [inputOpen, setInputOpen] = useState(false);
   const [date, setDate] = useState("");
-  let [displayDate, setDisplayDate] = useState("");
-
+  const [displayDate, setDisplayDate] = useState("");
 
   useEffect(() => {
     const date = new Date();
-    let displayDate = date;
+    const displayDate = date;
     setDisplayDate(displayDate);
-    const currentDate = `${date.getDate()}-${date.getMonth() + 1
-      }-${date.getFullYear()}`;
+    const currentDate = `${date.getDate()}-${
+      date.getMonth() + 1
+    }-${date.getFullYear()}`;
     setDate(currentDate);
   }, []);
 
@@ -34,28 +32,25 @@ const Dashboard = () => {
     setInputOpen(!inputOpen);
   };
 
+  const cancelInput = () => {
+    handleToggleInsertMenu();
+  };
+
   const addData = async (data) => {
     handleToggleInsertMenu();
     const auth = getAuth();
     const user = auth.currentUser;
     const db = getFirestore();
-    // const factorOne = parseInt(data.Weight) * 1.082 + 94.42;
-    // const factorTwo = parseInt(data.Waist) * 4.15;
-    // const leanBodyMass = factorOne - factorTwo;
-    // const bodyFatWeight = parseInt(data.Weight) - leanBodyMass;
-    // data.BodyFat = ((bodyFatWeight * 100) / parseInt(data.Weight)).toFixed(1);
-    // console.log((bodyFatWeight * 100) / parseInt(data.Weight));
-
-    // Getting height
     let height = 0;
+    let age = 0;
     const docRef = doc(db, "users", user.uid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       height = docSnap.data().Height;
+      age = docSnap.data().Age;
     }
     data.BMI = (data.Weight / ((height * height) / 10000)).toFixed(2);
-    //! Need to add getting age from db
-    data.BodyFat = (1.2 * data.BMI + 0.23 * 21 - 16.2).toFixed(1);
+    data.BodyFat = (1.2 * data.BMI + 0.23 * age - 16.2).toFixed(1);
     await setDoc(doc(db, "users", auth.currentUser.uid, "mes", date), data);
     alert("Data added");
   };
@@ -63,7 +58,7 @@ const Dashboard = () => {
     let dayms = 86400000;
     let forwardDate = displayDate;
     forwardDate.setTime(forwardDate.getTime() + dayms);
-    setDisplayDate = forwardDate;
+    setDisplayDate(forwardDate);
     let days = parseInt(displayDate.getDate());
     let months = parseInt(displayDate.getMonth() + 1);
     let years = parseInt(displayDate.getFullYear());
@@ -74,15 +69,11 @@ const Dashboard = () => {
     let dayms = 86400000;
     let forwardDate = displayDate;
     forwardDate.setTime(forwardDate.getTime() - dayms);
-    setDisplayDate = forwardDate;
+    setDisplayDate(forwardDate);
     let days = parseInt(displayDate.getDate());
     let months = parseInt(displayDate.getMonth() + 1);
     let years = parseInt(displayDate.getFullYear());
     setDate(`${days}-${months}-${years}`);
-  };
-
-  const cancelInput = () => {
-    handleToggleInsertMenu();
   };
 
   return (
@@ -106,15 +97,17 @@ const Dashboard = () => {
             altText="plus sign"
             action={handleToggleInsertMenu}
           />
-          <NextPageButton
+          <DashboardButton
             icon={rightArrow}
             altText="right arrow"
             action={dateForwards}
+            style={{ right: "6em", bottom: "1em" }}
           />
-          <PrevPageButton
+          <DashboardButton
             icon={leftArrow}
             altText="left arrow"
             action={dateBackwards}
+            style={{ right: "11em", bottom: "1em" }}
           />
         </>
       )}
