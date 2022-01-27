@@ -37,23 +37,16 @@ const Dashboard = () => {
     const auth = getAuth();
     const user = auth.currentUser;
     const db = getFirestore();
-    // const factorOne = parseInt(data.Weight) * 1.082 + 94.42;
-    // const factorTwo = parseInt(data.Waist) * 4.15;
-    // const leanBodyMass = factorOne - factorTwo;
-    // const bodyFatWeight = parseInt(data.Weight) - leanBodyMass;
-    // data.BodyFat = ((bodyFatWeight * 100) / parseInt(data.Weight)).toFixed(1);
-    // console.log((bodyFatWeight * 100) / parseInt(data.Weight));
-
-    // Getting height
     let height = 0;
+    let age = 0;
     const docRef = doc(db, "users", user.uid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       height = docSnap.data().Height;
+      age = docSnap.data().Age;
     }
     data.BMI = (data.Weight / ((height * height) / 10000)).toFixed(2);
-    //! Need to add getting age from db
-    data.BodyFat = (1.2 * data.BMI + 0.23 * 21 - 16.2).toFixed(1);
+    data.BodyFat = (1.2 * data.BMI + 0.23 * age - 16.2).toFixed(1);
     await setDoc(doc(db, "users", auth.currentUser.uid, "mes", date), data);
     alert("Data added");
   };
