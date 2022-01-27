@@ -32,6 +32,10 @@ const Dashboard = () => {
     setInputOpen(!inputOpen);
   };
 
+  const cancelInput = () => {
+    handleToggleInsertMenu();
+  };
+
   const addData = async (data) => {
     handleToggleInsertMenu();
     const auth = getAuth();
@@ -70,10 +74,6 @@ const Dashboard = () => {
     let months = parseInt(displayDate.getMonth() + 1);
     let years = parseInt(displayDate.getFullYear());
     setDate(`${days}-${months}-${years}`);
-  };
-
-  const cancelInput = () => {
-    handleToggleInsertMenu();
   };
 
   return (
