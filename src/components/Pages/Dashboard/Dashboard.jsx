@@ -104,7 +104,7 @@ const Dashboard = () => {
         <DataInputPanel onSave={addData} onCancel={cancelInput} />
       ) : null}
       <SectionWrapper>
-        <Chart />
+        <Chart date={date} />
       </SectionWrapper>
       <SectionWrapper>
         <StatsList date={date} />
