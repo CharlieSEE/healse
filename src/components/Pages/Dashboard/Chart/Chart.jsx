@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+import { getAuth } from "firebase/auth";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 import {
   Chart as ChartJS,
   LineElement,
@@ -10,7 +12,8 @@ import {
 } from "chart.js";
 
 const Chart = () => {
-  const [data, setdata] = useState({});
+  const [labels, setlabels] = useState([]);
+  const [values, setvalues] = useState([]);
   ChartJS.register(
     LineElement,
     PointElement,
@@ -18,7 +21,28 @@ const Chart = () => {
     Title,
     CategoryScale
   );
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const auth = getAuth();
+      const user = auth.currentUser;
+      const db = getFirestore();
+      const docRef = collection(db, "users", user.uid, "mes");
+      const docSnap = await getDocs(docRef);
+      docSnap.forEach((doc) => {
+        setlabels((oldArray) => [...oldArray, doc.id].sort());
+        const dataObj = doc.data();
+        setvalues((oldArray) => [...oldArray, dataObj.Weight]);
+        console.log("DATA:");
+        console.log(dataObj.Weight);
+        console.log(doc.id, " => ", doc.data());
+      });
+      console.log("labesl");
+      console.log(`Lables: ${labels}`);
+      console.log("valuess");
+      console.log(values);
+    };
+    fetchData();
+  }, []);
   const options = {
     responsive: true,
     plugins: {
@@ -27,7 +51,7 @@ const Chart = () => {
       },
       title: {
         display: true,
-        text: "Chart.js Line Chart",
+        text: "Weight chart",
       },
     },
   };
@@ -37,17 +61,14 @@ const Chart = () => {
         options={options}
         datasetIdKey="id"
         data={{
-          labels: ["Jun", "Jul", "Aug"],
+          // labels: ["Jun", "Jul", "Aug"],
+          labels: labels,
           datasets: [
             {
               id: 1,
               label: "",
-              data: [5, 6, 7],
-            },
-            {
-              id: 2,
-              label: "",
-              data: [3, 2, 1],
+              data: values,
+              borderColor: "rgb(130, 171, 255)",
             },
           ],
         }}
