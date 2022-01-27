@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DashboardButton from "../DashboardButton/DashboardButton";
 import styles from "./DataInputPanel.module.css";
-import plusIcon from "../../../../assets/icons/plus.svg";
+import SaveIcon from "../../../../assets/icons/Save.svg";
 import closeIcon from "../../../../assets/icons/X_button.svg";
 
 const DataInputPanel = ({ onSave, onCancel }) => {
@@ -76,7 +76,7 @@ const DataInputPanel = ({ onSave, onCancel }) => {
           value={biceps}
         />
       </div>
-      <DashboardButton icon={plusIcon} altText="plus sign" action={getInput} />
+      <DashboardButton icon={SaveIcon} altText="plus sign" action={getInput} />
       <DashboardButton
         icon={closeIcon}
         altText="plus sign"

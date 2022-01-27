@@ -7,34 +7,34 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="X_button.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   id="svg6860"
-   version="1.1"
-   viewBox="0 0 45.379395 45.379395"
+   width="45.379395mm"
    height="45.379395mm"
-   width="45.379395mm">
+   viewBox="0 0 45.379395 45.379395"
+   version="1.1"
+   id="svg6860"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="X_button.svg">
   <defs
      id="defs6854" />
   <sodipodi:namedview
-     inkscape:window-maximized="0"
-     inkscape:window-y="268"
-     inkscape:window-x="553"
-     inkscape:window-height="1080"
-     inkscape:window-width="1541"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="361.76291"
-     inkscape:cx="266.08317"
-     inkscape:zoom="0.7"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     id="base"
      pagecolor="#ffffff"
-     id="base" />
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="266.08317"
+     inkscape:cy="361.76291"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata6857">
     <rdf:RDF>
@@ -43,34 +43,34 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
+     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+     id="layer1">
     <circle
-       r="22.689699"
-       cy="22.689699"
-       cx="22.689699"
+       style="fill:#fe8282;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.99998;stroke-linecap:square;stroke-miterlimit:0;stroke-dashoffset:2.4189"
        id="path844"
-       style="fill:#82abfe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.99998;stroke-linecap:square;stroke-miterlimit:0;stroke-dashoffset:2.4189" />
+       cx="22.689699"
+       cy="22.689699"
+       r="22.689699" />
     <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:6.00001;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:2.4189"
-       id="path852"
-       sodipodi:sides="4"
-       sodipodi:cx="22.689699"
-       sodipodi:cy="22.39509"
-       sodipodi:r1="15.154971"
-       sodipodi:r2="0.15154973"
-       sodipodi:arg1="0.78539816"
-       sodipodi:arg2="1.5707963"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
+       d="M 33.405882,33.111273 22.689699,22.54664 11.973516,33.111273 22.538149,22.39509 11.973516,11.678907 22.689699,22.24354 33.405882,11.678907 22.841249,22.39509 Z"
        inkscape:randomized="0"
-       d="M 33.405882,33.111273 22.689699,22.54664 11.973516,33.111273 22.538149,22.39509 11.973516,11.678907 22.689699,22.24354 33.405882,11.678907 22.841249,22.39509 Z" />
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="1.5707963"
+       sodipodi:arg1="0.78539816"
+       sodipodi:r2="0.15154973"
+       sodipodi:r1="15.154971"
+       sodipodi:cy="22.39509"
+       sodipodi:cx="22.689699"
+       sodipodi:sides="4"
+       id="path852"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:6.00001;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:2.4189"
+       sodipodi:type="star" />
   </g>
 </svg>
