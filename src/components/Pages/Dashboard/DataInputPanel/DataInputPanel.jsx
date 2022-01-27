@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import DashboardButton from "../DashboardButton/DashboardButton";
 import styles from "./DataInputPanel.module.css";
-import plusIcon from "../../../../assets/icons/plus.svg"
+import plusIcon from "../../../../assets/icons/plus.svg";
+import closeIcon from "../../../../assets/icons/X_button.svg";
 
-const DataInputPanel = ({ onSave }) => {
+const DataInputPanel = ({ onSave, onCancel }) => {
   const [weight, setWeight] = useState("");
   const [waist, setWaist] = useState("");
   const [hip, setHip] = useState("");
@@ -75,10 +76,12 @@ const DataInputPanel = ({ onSave }) => {
           value={biceps}
         />
       </div>
+      <DashboardButton icon={plusIcon} altText="plus sign" action={getInput} />
       <DashboardButton
-        icon={plusIcon}
+        icon={closeIcon}
         altText="plus sign"
-        action={getInput}
+        action={onCancel}
+        style={{ right: "6em", bottom: "1em" }}
       />
     </>
   );
