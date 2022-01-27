@@ -11,7 +11,7 @@ import {
   CategoryScale,
 } from "chart.js";
 
-const Chart = () => {
+const Chart = ({ date }) => {
   const [labels, setlabels] = useState([]);
   const [values, setvalues] = useState([]);
   ChartJS.register(
@@ -28,6 +28,8 @@ const Chart = () => {
       const db = getFirestore();
       const docRef = collection(db, "users", user.uid, "mes");
       const docSnap = await getDocs(docRef);
+      setlabels([]);
+      setvalues([]);
       docSnap.forEach((doc) => {
         setlabels((oldArray) => [...oldArray, doc.id].sort());
         const dataObj = doc.data();
@@ -42,7 +44,7 @@ const Chart = () => {
       console.log(values);
     };
     fetchData();
-  }, []);
+  }, [date]);
   const options = {
     responsive: true,
     plugins: {
