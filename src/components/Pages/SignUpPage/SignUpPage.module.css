@@ -6,6 +6,9 @@
   align-items: center;
   background-color: var(--secondary-color);
 }
+.blueText {
+  color: var(--primary-color);
+}
 .signUpTitle {
   width: 70vw;
   max-width: 370px;
@@ -17,7 +20,6 @@
 .confirmationField {
   border-radius: 0.6em;
   border: 0.1em solid var(--primary-color);
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
   margin: 1em;
@@ -63,4 +65,18 @@
 .signUpForm input[type="submit"]:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
+}
+.signUpForm select {
+  border-radius: 0.6em;
+  border: 0.1em solid var(--primary-color);
+  transition: 0.5s;
+  outline: none;
+  margin: 1em;
+  padding: 0.5em 0 0.5em 0.5em;
+  width: 70vw;
+  max-width: 370px;
+  line-height: 2.2em;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: inherit;
 }

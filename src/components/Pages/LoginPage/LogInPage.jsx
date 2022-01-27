@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
-} from "firebase/auth";
+// import {
+//   getAuth,
+//   signInWithEmailAndPassword,
+//   signInWithPopup,
+//   GoogleAuthProvider,
+// } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 import styles from "./LogInPage.module.css";
 
@@ -14,7 +15,7 @@ function LogInPage() {
 
   const auth = getAuth();
   const history = useHistory();
-  const provider = new GoogleAuthProvider();
+  // const provider = new GoogleAuthProvider();
   const login = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, userEmail, userPassword)
@@ -27,19 +28,19 @@ function LogInPage() {
         console.error(`${errorCode} ${errorMessage}`);
       });
   };
-  const googleLogin = (e) => {
-    e.preventDefault();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log(result);
-        history.push("/dashboard");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error(`${errorCode} ${errorMessage}`);
-      });
-  };
+  // const googleLogin = (e) => {
+  //   e.preventDefault();
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       console.log(result);
+  //       history.push("/dashboard");
+  //     })
+  //     .catch((error) => {
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       console.error(`${errorCode} ${errorMessage}`);
+  //     });
+  // };
   return (
     <div className={styles.logInPage}>
       <h1 className={styles.logInTitle}>
@@ -67,13 +68,11 @@ function LogInPage() {
         />
         <input type="submit" value="Log in" />
       </form>
-      <button className={styles.loginProviderButton} onClick={googleLogin}>
-        {/* <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="google icon" /> */}
+      {/* <button className={styles.loginProviderButton} onClick={googleLogin}>
         <span>
-          {" "}
           Login with <b>Google</b>
         </span>
-      </button>
+      </button> */}
     </div>
   );
 }

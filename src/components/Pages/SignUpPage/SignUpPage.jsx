@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+import { doc, setDoc, getFirestore } from "firebase/firestore";
 import styles from "./SignUpPage.module.css";
 
 const SignUpPage = () => {
@@ -8,6 +9,9 @@ const SignUpPage = () => {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userPasswordConfirmation, setUserPasswordConfirmation] = useState("");
+  const [userAge, setUserAge] = useState("");
+  const [userHeight, setUserHeight] = useState("");
+  const [userGender, setUserGender] = useState("");
   const [wrongInput, setWrongInput] = useState(false);
 
   const history = useHistory();
@@ -18,10 +22,16 @@ const SignUpPage = () => {
       setWrongInput(true);
       return;
     }
+
     console.log(`${userEmail}, ${userName}, ${userPassword}`);
     createUserWithEmailAndPassword(auth, userEmail, userPassword)
-      .then(() => {
-        auth.currentUser.displayName = userName;
+      .then(async () => {
+        const user = auth.currentUser;
+        user.displayName = userName;
+        const db = getFirestore();
+        const docRef = doc(db, "users", user.uid);
+        const data = { Age: userAge, Height: userHeight, Genders: userGender };
+        await setDoc(docRef, data);
         history.push("/dashboard");
       })
       .catch((error) => {
@@ -69,6 +79,30 @@ const SignUpPage = () => {
           value={userPasswordConfirmation}
           placeholder="Confirm"
         />
+        <input
+          type="text"
+          className={styles.signUpInputField}
+          onChange={(e) => setUserHeight(e.target.value)}
+          value={userHeight}
+          placeholder="Height"
+        />
+        <input
+          type="number"
+          className={styles.signUpInputField}
+          onChange={(e) => setUserAge(e.target.value)}
+          value={userAge}
+          placeholder="Age"
+        />
+        <select
+          name="gender"
+          value={userGender}
+          onChange={(e) => setUserGender(e.target.value)}
+          required
+        >
+          <option value="">Chose your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
         {wrongInput ? (
           <div className={styles.confirmationInfo}>
             Use 8 or more characters with a mix of letters, numbers & symbols
