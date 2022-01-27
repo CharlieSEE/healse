@@ -18,12 +18,15 @@ import styles from "./DashboardPage.module.css";
 const Dashboard = () => {
   const [inputOpen, setInputOpen] = useState(false);
   const [date, setDate] = useState("");
+  let [displayDate, setDisplayDate] = useState("");
+
 
   useEffect(() => {
     const date = new Date();
-    const currentDate = `${date.getDate()}-${
-      date.getMonth() + 1
-    }-${date.getFullYear()}`;
+    let displayDate = date;
+    setDisplayDate(displayDate);
+    const currentDate = `${date.getDate()}-${date.getMonth() + 1
+      }-${date.getFullYear()}`;
     setDate(currentDate);
   }, []);
 
@@ -57,37 +60,24 @@ const Dashboard = () => {
     alert("Data added");
   };
   const dateForwards = () => {
-    let [days, months, years] = date.split("-");
-    days = parseInt(days);
-    months = parseInt(months);
-    years = parseInt(years);
-    if (days < 31) {
-      days++;
-    } else if (days === 31 && months < 12) {
-      days = 1;
-      months++;
-    } else if (days === 31 && months === 12) {
-      days = 1;
-      months = 1;
-      years++;
-    }
+    let dayms = 86400000;
+    let forwardDate = displayDate;
+    forwardDate.setTime(forwardDate.getTime() + dayms);
+    setDisplayDate = forwardDate;
+    let days = parseInt(displayDate.getDate());
+    let months = parseInt(displayDate.getMonth() + 1);
+    let years = parseInt(displayDate.getFullYear());
+
     setDate(`${days}-${months}-${years}`);
   };
   const dateBackwards = () => {
-    let [days, months, years] = date.split("-");
-    days = parseInt(days);
-    months = parseInt(months);
-    years = parseInt(years);
-    if (days > 1) {
-      days--;
-    } else if (days === 1 && months > 1) {
-      days = 31;
-      months--;
-    } else if (days === 1 && months === 1) {
-      days = 31;
-      months = 12;
-      years--;
-    }
+    let dayms = 86400000;
+    let forwardDate = displayDate;
+    forwardDate.setTime(forwardDate.getTime() - dayms);
+    setDisplayDate = forwardDate;
+    let days = parseInt(displayDate.getDate());
+    let months = parseInt(displayDate.getMonth() + 1);
+    let years = parseInt(displayDate.getFullYear());
     setDate(`${days}-${months}-${years}`);
   };
 
