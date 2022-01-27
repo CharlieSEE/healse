@@ -10,23 +10,21 @@ import rightArrow from "../../../assets/icons/arrow_right.svg";
 import DataInputPanel from "./DataInputPanel/DataInputPanel";
 import SectionWrapper from "./SectionWrapper/SectionWrapper";
 import DashboardButton from "./DashboardButton/DashboardButton";
-import NextPageButton from "./NextPageButton/NextPageButton";
-import PrevPageButton from "./PrevPageButton/PrevPageButton";
 
 import styles from "./DashboardPage.module.css";
 
 const Dashboard = () => {
   const [inputOpen, setInputOpen] = useState(false);
   const [date, setDate] = useState("");
-  let [displayDate, setDisplayDate] = useState("");
-
+  const [displayDate, setDisplayDate] = useState("");
 
   useEffect(() => {
     const date = new Date();
-    let displayDate = date;
+    const displayDate = date;
     setDisplayDate(displayDate);
-    const currentDate = `${date.getDate()}-${date.getMonth() + 1
-      }-${date.getFullYear()}`;
+    const currentDate = `${date.getDate()}-${
+      date.getMonth() + 1
+    }-${date.getFullYear()}`;
     setDate(currentDate);
   }, []);
 
@@ -63,7 +61,7 @@ const Dashboard = () => {
     let dayms = 86400000;
     let forwardDate = displayDate;
     forwardDate.setTime(forwardDate.getTime() + dayms);
-    setDisplayDate = forwardDate;
+    setDisplayDate(forwardDate);
     let days = parseInt(displayDate.getDate());
     let months = parseInt(displayDate.getMonth() + 1);
     let years = parseInt(displayDate.getFullYear());
@@ -74,7 +72,7 @@ const Dashboard = () => {
     let dayms = 86400000;
     let forwardDate = displayDate;
     forwardDate.setTime(forwardDate.getTime() - dayms);
-    setDisplayDate = forwardDate;
+    setDisplayDate(forwardDate);
     let days = parseInt(displayDate.getDate());
     let months = parseInt(displayDate.getMonth() + 1);
     let years = parseInt(displayDate.getFullYear());
@@ -106,15 +104,17 @@ const Dashboard = () => {
             altText="plus sign"
             action={handleToggleInsertMenu}
           />
-          <NextPageButton
+          <DashboardButton
             icon={rightArrow}
             altText="right arrow"
             action={dateForwards}
+            style={{ right: "6em", bottom: "1em" }}
           />
-          <PrevPageButton
+          <DashboardButton
             icon={leftArrow}
             altText="left arrow"
             action={dateBackwards}
+            style={{ right: "11em", bottom: "1em" }}
           />
         </>
       )}

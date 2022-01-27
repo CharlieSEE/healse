@@ -3,8 +3,8 @@ import styles from "./DashboardButton.module.css";
 
 const DashboardButton = ({ icon, action, altText, ...props }) => {
   return (
-    <div className={styles.plusIconWrapper} onClick={action} {...props}>
-      <img className={styles.plusIconWrapperIcon} src={icon} alt={altText} />
+    <div className={styles.wrapper} onClick={action} {...props}>
+      <img src={icon} alt={altText} />
     </div>
   );
 };
