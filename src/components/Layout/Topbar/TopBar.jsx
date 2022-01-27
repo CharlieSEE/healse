@@ -16,7 +16,9 @@ const TopBar = () => {
   return (
     <div className={styles.Wrapper}>
       <img className={styles.menu} src={Menu} alt="Healse logo" />
-      <img className={styles.logo} src={Logo} alt="Healse logo" />
+      <div className={styles.logoWrapper}>
+        <img className={styles.logo} src={Logo} alt="Healse logo" />
+      </div>
       {/* {auth.currentUser ? <button onClick={logOut}>Logout</button> : null} */}
     </div>
   );

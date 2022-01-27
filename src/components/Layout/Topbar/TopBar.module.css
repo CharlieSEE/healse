@@ -2,15 +2,19 @@
 
 .Wrapper {
   display: grid;
-  grid-template-columns: auto 70%;
+  grid-template-columns: auto 1fr;
   align-items: center;
 }
-.logo{
-  padding: 1rem 0;
-  grid-column: 2/3;
+.logoWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.menu{
-  grid-column: 1/2;
+.logo {
+  padding: 1rem 0;
+}
+.menu {
   max-height: 3rem;
   padding: 0.5rem;
 }
