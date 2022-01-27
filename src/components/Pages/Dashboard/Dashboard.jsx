@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore";
 
 import Chart from "./Chart/Chart";
@@ -17,8 +16,6 @@ import PrevPageButton from "./PrevPageButton/PrevPageButton";
 import styles from "./DashboardPage.module.css";
 
 const Dashboard = () => {
-  const auth = getAuth();
-  const history = useHistory();
   const [inputOpen, setInputOpen] = useState(false);
   const [date, setDate] = useState("");
   let [displayDate, setDisplayDate] = useState("");
@@ -36,29 +33,29 @@ const Dashboard = () => {
   const handleToggleInsertMenu = () => {
     setInputOpen(!inputOpen);
   };
-  const logOut = () => {
-    signOut(auth).then(() => {
-      history.push("/");
-    });
-  };
+
   const addData = async (data) => {
     handleToggleInsertMenu();
     const auth = getAuth();
     const user = auth.currentUser;
     const db = getFirestore();
-    const factorOne = data.Weight * 1.082 + 94.42;
-    const factorTwo = data.Waist * 4.15;
-    const leanBodyMass = factorOne - factorTwo;
-    const bodyFatWeight = data.Weight - leanBodyMass;
-    let height = 0;
-    data.BodyFat = Math.floor((bodyFatWeight * 100) / data.Weight);
+    // const factorOne = parseInt(data.Weight) * 1.082 + 94.42;
+    // const factorTwo = parseInt(data.Waist) * 4.15;
+    // const leanBodyMass = factorOne - factorTwo;
+    // const bodyFatWeight = parseInt(data.Weight) - leanBodyMass;
+    // data.BodyFat = ((bodyFatWeight * 100) / parseInt(data.Weight)).toFixed(1);
+    // console.log((bodyFatWeight * 100) / parseInt(data.Weight));
+
     // Getting height
+    let height = 0;
     const docRef = doc(db, "users", user.uid);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       height = docSnap.data().Height;
     }
     data.BMI = (data.Weight / ((height * height) / 10000)).toFixed(2);
+    //! Need to add getting age from db
+    data.BodyFat = (1.2 * data.BMI + 0.23 * 21 - 16.2).toFixed(1);
     await setDoc(doc(db, "users", auth.currentUser.uid, "mes", date), data);
     alert("Data added");
   };
@@ -84,18 +81,23 @@ const Dashboard = () => {
     setDate(`${days}-${months}-${years}`);
   };
 
+  const cancelInput = () => {
+    handleToggleInsertMenu();
+  };
+
   return (
     <div className={styles.dashboardPage}>
       <SectionWrapper>
-        <h1>{date}</h1>
+        <h1>{`🕒${date}🕒`}</h1>
       </SectionWrapper>
-      {inputOpen ? <DataInputPanel onSave={addData} /> : null}
+      {inputOpen ? (
+        <DataInputPanel onSave={addData} onCancel={cancelInput} />
+      ) : null}
       <SectionWrapper>
-        <Chart />
+        <Chart date={date} />
       </SectionWrapper>
       <SectionWrapper>
         <StatsList date={date} />
-        <button onClick={logOut}>Logout</button>
       </SectionWrapper>
       {inputOpen ? null : (
         <>

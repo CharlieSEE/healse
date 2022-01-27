@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import TopBar from "./Topbar/TopBar";
 
 const Layout = ({ children }) => {
-  const [open, setOpen] = useState(false);
-  const toggleDrawer = () => {
-    setOpen(true);
-  };
   return (
     <div>
-      <TopBar title="Ww" toggleSideMenu={toggleDrawer} />
+      <TopBar />
       {children}
     </div>
   );

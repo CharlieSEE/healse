@@ -3,6 +3,16 @@ import { getAuth } from "firebase/auth";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import StatsListElement from "./StatsListElement";
 
+// Icons
+import ThighIcon from "../../../../assets/icons/Thigh.svg";
+import BicepsIcon from "../../../../assets/icons/Biceps.svg";
+import BMIIcon from "../../../../assets/icons/BMI.svg";
+import BodyFatIcon from "../../../../assets/icons/Body_fat.svg";
+import ChestIcon from "../../../../assets/icons/Chest.svg";
+import HipIcon from "../../../../assets/icons/Hip.svg";
+import WaistIcon from "../../../../assets/icons/Waist.svg";
+import WeightIcon from "../../../../assets/icons/Weight.svg";
+
 const StatsList = ({ date }) => {
   const [data, setData] = useState({
     Weight: 0,
@@ -48,51 +58,59 @@ const StatsList = ({ date }) => {
     <>
       <StatsListElement
         name="Weight"
-        icon="icon"
-        change="change"
+        icon={WeightIcon}
         value={data.Weight}
+        altText="Weight icon"
+        unit="kg"
       />
       <StatsListElement
         name="BMI"
-        icon="icon"
-        change="change"
+        icon={BMIIcon}
         value={data.BMI}
+        altText="BMI icon"
+        unit=""
       />
       <StatsListElement
         name="Body Fat"
-        icon="icon"
-        change="change"
+        icon={BodyFatIcon}
         value={data.BodyFat}
+        altText="Body Fat icon"
+        unit="%"
       />
       <StatsListElement
         name="Waist circumference"
-        icon="icon"
-        change="change"
+        icon={WaistIcon}
         value={data.Waist}
+        altText="Waist circumference icon"
+        unit="cm"
       />
       <StatsListElement
         name="Hip circumference"
-        icon="icon"
-        change="change"
+        icon={HipIcon}
         value={data.Hip}
+        altText="Hip circumference icon"
+        unit="cm"
       />
       <StatsListElement
         name="Chest circumference"
-        icon="icon"
-        change="change"
+        icon={ChestIcon}
         value={data.Chest}
+        altText="Chest circumference icon"
+        unit="cm"
       />
       <StatsListElement
         name="Thigh circumference"
-        icon="icon"
-        change="change"
+        icon={ThighIcon}
         value={data.Thigh}
+        altText="Thigh circumference icon"
+        unit="cm"
       />
       <StatsListElement
         name="Biceps circumference"
-        icon="icon"
-        change="change"
+        icon={BicepsIcon}
         value={data.Biceps}
+        altText="Biceps circumference icon"
+        unit="cm"
       />
     </>
   );

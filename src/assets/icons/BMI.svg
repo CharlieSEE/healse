@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="BMI.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg6860"
+   version="1.1"
+   viewBox="0 0 45.379395 45.379395"
+   height="45.379395mm"
+   width="45.379395mm">
+  <defs
+     id="defs6854" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="268"
+     inkscape:window-x="553"
+     inkscape:window-height="1080"
+     inkscape:window-width="1541"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="361.76291"
+     inkscape:cx="266.08317"
+     inkscape:zoom="0.7"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata6857">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       style="fill:#82abfe;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.99998;stroke-linecap:square;stroke-miterlimit:0;stroke-dashoffset:2.4189"
+       id="path844-1-4-5"
+       cx="22.689701"
+       cy="22.689701"
+       r="22.689701" />
+    <g
+       style="stroke-width:3.56905;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0.79369719,0,0,0.77545184,5.3183528,-82.876818)"
+       id="g979">
+      <path
+         transform="translate(-3.9470104,-0.20375881)"
+         id="path886"
+         style="font-style:italic;font-weight:bold;font-size:20.8821px;line-height:1.25;font-family:Merula;-inkscape-font-specification:'Merula Bold Italic';text-align:center;letter-spacing:1.08744px;text-anchor:middle;fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.56905;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:2.4189"
+         d="M 25.962645,113.52739 A 21.206751,22.468041 0 0 0 4.8548878,134.43256 H 47.165484 a 21.206751,22.468041 0 0 0 -21.155299,-20.90517 21.206751,22.468041 0 0 0 -0.04754,0 z" />
+      <path
+         id="path908-1"
+         style="font-style:italic;font-weight:bold;font-size:20.8821px;line-height:1.25;font-family:Merula;-inkscape-font-specification:'Merula Bold Italic';text-align:center;letter-spacing:1.08744px;text-anchor:middle;fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.56905;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:2.4189"
+         inkscape:transform-center-x="-3.8192128e-06"
+         d="m 26.010207,117.81382 -0.01713,5.30807 h 0.01713 0.01713 z m -9.022426,2.83783 3.209081,4.30406 c 0.0091,-0.007 0.01816,-0.0131 0.02726,-0.0196 z m 18.04524,0 -3.237123,4.28483 c 0.0094,0.007 0.0187,0.0131 0.02804,0.0196 z m -23.621798,7.43031 5.209695,1.65624 c 0.0035,-0.0106 0.007,-0.0212 0.01051,-0.0317 z m 29.197966,0 -5.21982,1.62457 c 0.0035,0.0104 0.007,0.0209 0.01051,0.0313 z"
+         sodipodi:nodetypes="ccccccccccccccccccccc"
+         transform="translate(-3.9470104,-0.20375881)" />
+      <path
+         style="font-style:italic;font-weight:bold;font-size:20.8821px;line-height:1.25;font-family:Merula;-inkscape-font-specification:'Merula Bold Italic';text-align:center;letter-spacing:1.08744px;text-anchor:middle;fill:none;stroke:#ffffff;stroke-width:3.56905;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 25.993076,133.37527 2.576447,-3.97852"
+         id="path934"
+         sodipodi:nodetypes="cc"
+         transform="translate(-3.9470104,-0.20375881)" />
+    </g>
+    <g
+       aria-label="Kg"
+       id="text931-5-7"
+       style="font-style:italic;font-weight:bold;font-size:12.7px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Bold Italic';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.264583;stroke-opacity:1"
+       transform="translate(46.651234,-42.923079)">
+      <text
+         id="text1032"
+         y="78.243507"
+         x="-23.847839"
+         style="font-style:italic;font-weight:bold;font-size:14.1111px;line-height:2;font-family:Arial;-inkscape-font-specification:'Arial Bold Italic';text-align:center;text-anchor:middle;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Arial;-inkscape-font-specification:Arial;stroke:#ffffff;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none"
+           y="78.243507"
+           x="-23.847839"
+           id="tspan1030"
+           sodipodi:role="line">BMI</tspan></text>
+    </g>
+  </g>
+</svg>
