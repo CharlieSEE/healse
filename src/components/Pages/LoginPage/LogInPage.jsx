@@ -5,8 +5,13 @@ import React, { useState } from "react";
 //   signInWithPopup,
 //   GoogleAuthProvider,
 // } from "firebase/auth";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useHistory } from "react-router-dom";
+import {
+  getAuth,
+  setPersistence,
+  signInWithEmailAndPassword,
+  browserLocalPersistence,
+} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import styles from "./LogInPage.module.css";
 
 function LogInPage() {
@@ -14,18 +19,27 @@ function LogInPage() {
   const [userPassword, setUserPassword] = useState("");
 
   const auth = getAuth();
-  const history = useHistory();
+  let navigate = useNavigate();
+
   // const provider = new GoogleAuthProvider();
   const login = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, userEmail, userPassword)
+    setPersistence(auth, browserLocalPersistence)
       .then(() => {
-        history.push("/dashboard");
+        signInWithEmailAndPassword(auth, userEmail, userPassword)
+          .then(() => {
+            navigate("/dashboard");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error(`${errorCode} ${errorMessage}`);
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(`${errorCode} ${errorMessage}`);
+        console.log(`${errorCode}: ${errorMessage}`);
       });
   };
   // const googleLogin = (e) => {
