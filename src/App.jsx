@@ -1,10 +1,12 @@
-import React from "react";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 // Firebase imports
 import { initializeApp } from "firebase/app";
 
 import Layout from "./components/Layout/Layout";
-import PrivateRoute from "./components//Routes/PrivateRoute";
+import ProtectedRoute from "./components//Routes/ProtectedRoute";
+import PublicRoute from "./components//Routes/PublicRoute";
+
+import { AuthContextProvider } from "./components/Context/FirebaseContext";
 
 // Page imports
 import LandingPage from "./components/Pages/LandingPage/LandingPage";
@@ -29,27 +31,48 @@ initializeApp(firebaseConfig);
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/">
-              <LandingPage />
-            </Route>
-            <Route path="/login">
-              <LogInPage />
-            </Route>
-            <Route path="/signup">
-              <SignUpPage />
-            </Route>
-            <PrivateRoute path="/dashboard">
-              <Dashboard />
-            </PrivateRoute>
-            <Route path="*">
-              <ErrorPage />
-            </Route>
-          </Switch>
-        </BrowserRouter>
-      </Layout>
+      <AuthContextProvider>
+        <Layout>
+          <BrowserRouter>
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <PublicRoute>
+                    <LandingPage />
+                  </PublicRoute>
+                }
+              />
+              <Route
+                path="/login"
+                element={
+                  <PublicRoute>
+                    <LogInPage />
+                  </PublicRoute>
+                }
+              />
+              <Route
+                path="/signup"
+                element={
+                  <PublicRoute>
+                    <SignUpPage />
+                  </PublicRoute>
+                }
+              />
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </BrowserRouter>
+        </Layout>
+      </AuthContextProvider>
     </div>
   );
 }
