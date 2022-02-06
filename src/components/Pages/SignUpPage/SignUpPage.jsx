@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useHistory } from "react-router-dom";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import { doc, setDoc, getFirestore } from "firebase/firestore";
 import styles from "./SignUpPage.module.css";
 
@@ -14,7 +19,8 @@ const SignUpPage = () => {
   const [userGender, setUserGender] = useState("");
   const [wrongInput, setWrongInput] = useState(false);
 
-  const history = useHistory();
+  let navigate = useNavigate();
+
   const auth = getAuth();
   const validateData = (e) => {
     e.preventDefault();
@@ -24,20 +30,32 @@ const SignUpPage = () => {
     }
 
     console.log(`${userEmail}, ${userName}, ${userPassword}`);
-    createUserWithEmailAndPassword(auth, userEmail, userPassword)
-      .then(async () => {
-        const user = auth.currentUser;
-        user.displayName = userName;
-        const db = getFirestore();
-        const docRef = doc(db, "users", user.uid);
-        const data = { Age: userAge, Height: userHeight, Genders: userGender };
-        await setDoc(docRef, data);
-        history.push("/dashboard");
+    setPersistence(auth, browserLocalPersistence)
+      .then(() => {
+        createUserWithEmailAndPassword(auth, userEmail, userPassword)
+          .then(async () => {
+            const user = auth.currentUser;
+            user.displayName = userName;
+            const db = getFirestore();
+            const docRef = doc(db, "users", user.uid);
+            const data = {
+              Age: userAge,
+              Height: userHeight,
+              Genders: userGender,
+            };
+            await setDoc(docRef, data);
+            navigate("/dashboard");
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error(`${errorCode}, ${errorMessage}`);
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(`${errorCode}, ${errorMessage}`);
+        console.error(`${errorCode} ${errorMessage}`);
       });
   };
 
