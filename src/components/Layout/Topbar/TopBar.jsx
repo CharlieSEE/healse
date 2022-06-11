@@ -15,10 +15,10 @@ const TopBar = () => {
   // };
   return (
     <div className={styles.Wrapper}>
-      <img className={styles.menu} src={Menu} alt="Healse logo" />
       <div className={styles.logoWrapper}>
         <img className={styles.logo} src={Logo} alt="Healse logo" />
       </div>
+      <img className={styles.menu} src={Menu} alt="Menu icon" />
       {/* {auth.currentUser ? <button onClick={logOut}>Logout</button> : null} */}
     </div>
   );

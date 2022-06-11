@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import { doc, setDoc, getDoc, getFirestore } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+
 
 import Chart from "./Chart/Chart";
 import StatsList from "./StatsList/StatsList";
@@ -10,6 +12,7 @@ import rightArrow from "../../../assets/icons/arrow_right.svg";
 import DataInputPanel from "./DataInputPanel/DataInputPanel";
 import SectionWrapper from "./SectionWrapper/SectionWrapper";
 import DashboardButton from "./DashboardButton/DashboardButton";
+import Button from "../Button/Button.jsx";
 
 import styles from "./DashboardPage.module.css";
 
@@ -17,6 +20,8 @@ const Dashboard = () => {
   const [inputOpen, setInputOpen] = useState(false);
   const [date, setDate] = useState("");
   const [displayDate, setDisplayDate] = useState("");
+  const auth = getAuth();
+  let navigate = useNavigate();
 
   useEffect(() => {
     const date = new Date();
@@ -27,6 +32,12 @@ const Dashboard = () => {
     }-${date.getFullYear()}`;
     setDate(currentDate);
   }, []);
+
+  const logOut = () => {
+    signOut(auth).then(() => {
+      navigate("/");
+    });
+  };
 
   const handleToggleInsertMenu = () => {
     setInputOpen(!inputOpen);
@@ -111,6 +122,10 @@ const Dashboard = () => {
           />
         </>
       )}
+      <Button
+        onClick={logOut}
+        label="Log Out"
+      />
     </div>
   );
 };

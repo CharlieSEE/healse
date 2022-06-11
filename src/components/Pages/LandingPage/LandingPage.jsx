@@ -9,18 +9,16 @@ const LandingPage = () => {
         <h1 className={styles.title}>The only app you need</h1>
         {/* TODO Some anim */}
         <div className={styles.infoWrapper}>
-          <p className={styles.description}>
+          <div className={styles.infoElement}>
             Join us now and start tracking your body metrics
-          </p>
-          <div className={styles.detailSection}>
-            <div /*className="detailSection-element"*/>
-              icon <br />
-              open source
-            </div>
-            <div /*className="detailSection-element"*/>
-              icon <br />
-              free
-            </div>
+          </div>
+          <div className={styles.infoElement}>
+            icon <br />
+            open source
+          </div>
+          <div  className={styles.infoElement}>
+            icon <br />
+            free
           </div>
         </div>
         <div className={styles.waveDivider}>

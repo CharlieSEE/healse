@@ -1,31 +1,41 @@
 @import "../../../constants/colors.css";
 
 .logInPage {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+.logInWrapper {
   align-items: center;
+  box-shadow: 0 0.3em 0.2em 0.1em rgba(0, 0, 0, 0.2);
   background-color: var(--secondary-color);
+  border-radius: 1em;
+  border-bottom-right-radius: ;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 5rem auto;
+  padding: 1rem 0 1.5rem;
+  row-gap: 1rem;
+  width: 90vw;
 }
 .logInTitle {
-  width: 70vw;
-  max-width: 370px;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 700;
   line-height: 1.2em;
+  margin: auto;
+  width: 80%;
 }
 .logInInputField {
   border-radius: 0.5em;
   border: 0.1em solid var(--primary-color);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-  margin: 1em;
-  padding: 0.1em 0 0.1em 0.3em;
-  width: 70vw;
-  max-width: 370px;
-  line-height: 2.2em;
   font-size: 1em;
   font-family: inherit;
+  line-height: 2.2em;
+  margin: 1em auto;
+  outline: none;
+  padding: 0.1em 0 0.1em 0.4em;
+  transition: 0.5s;
+  width: 90%;
+  -webkit-transition: 0.5s;
 }
 .logInInputField:focus,
 .loginForm {
@@ -33,30 +43,30 @@
 }
 
 .logInForm input[type="submit"] {
+  background-color: var(--button-color);
   border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
-  margin-top: 5em;
-  padding: 0.1em;
-  width: 70vw;
-  max-width: 370px;
-  line-height: 1.5em;
-  font-size: 2em;
-  font-family: inherit;
-  font-weight: 600;
   color: var(--secondary-text-color);
-  background-color: var(--button-color);
   cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-top: 1em;
+  padding: 0.1em;
+  width: 90%;
 }
 .logInForm input[type="submit"]:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
 }
+{/*
 .loginProviderButton {
   border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
   margin-top: 2em;
   padding: 0.1em;
-  width: 70vw;
+  width: 10vw;
   max-width: 370px;
   line-height: 1.5em;
   font-size: 2em;
@@ -66,7 +76,15 @@
   background-color: var(--secondary-text-color);
   cursor: pointer;
 }
+*/}
 .loginProviderButton:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
+}
+
+@media (min-width: 35em) {
+ .logInWrapper {
+   margin-top: 15rem;
+   width: 500px;
+ }
 }
