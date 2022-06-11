@@ -1,35 +1,46 @@
 @import "../../../constants/colors.css";
 
 .signUpPage {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+.signUpWrapper {
   align-items: center;
+  box-shadow: 0 0.3em 0.2em 0.1em rgba(0, 0, 0, 0.2);
   background-color: var(--secondary-color);
+  border-radius: 1em;
+  border-bottom-right-radius: ;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 1.5rem auto;
+  padding: 1rem 0 1.5rem;
+  row-gap: 1rem;
+  width: 90vw;
 }
 .blueText {
   color: var(--primary-color);
 }
 .signUpTitle {
-  width: 70vw;
-  max-width: 370px;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 700;
   line-height: 1.2em;
+  margin: auto;
+  width: 80%;
 }
 .signUpInputField,
 .confirmationField {
-  border-radius: 0.6em;
   border: 0.1em solid var(--primary-color);
-  transition: 0.5s;
-  outline: none;
-  margin: 1em;
-  padding: 0.1em 0 0.1em 0.3em;
-  width: 70vw;
-  max-width: 370px;
+  border-radius: 0.5em;
+  font-family: inherit;
   line-height: 2.2em;
   font-size: 1em;
-  font-family: inherit;
-}
+  margin: 1em auto;
+  outline: none;
+  padding: 0.1em 0.4em;
+  transition: 0.5s;
+  width: 90%;
+  -webkit-transition: 0.5s;
+ }
 .signUpInputField:focus {
   border-color: var(--button-color-hover);
 }
@@ -37,46 +48,52 @@
   margin-bottom: 0.2em;
 }
 .confirmationInfo {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 0.7em;
-  width: 70vw;
-  max-width: 370px;
-  text-align: left;
-  font-size: 0.7em;
   color: var(--primary-text-color);
+  display: inline-block;
+  font-size: 0.7em;
+  max-width: 370px;
   opacity: 60%;
+  padding-left: 0.7em;
+  text-align: left;
+  vertical-align: middle;
+  width: 70vw;
 }
 .signUpForm input[type="submit"] {
+  background-color: var(--button-color);
   border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
-  margin-top: 2em;
-  padding: 0.1em;
-  width: 70vw;
-  max-width: 370px;
-  line-height: 1.5em;
-  font-size: 2em;
-  font-family: inherit;
-  font-weight: 600;
   color: var(--secondary-text-color);
-  background-color: var(--button-color);
   cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-top: 1em;
+  padding: 0.1em;
+  width: 90%;
 }
 .signUpForm input[type="submit"]:hover {
   background-color: var(--button-color-hover);
   border-color: var(--button-color-hover);
 }
 .signUpForm select {
-  border-radius: 0.6em;
   border: 0.1em solid var(--primary-color);
-  transition: 0.5s;
-  outline: none;
-  margin: 1em;
-  padding: 0.5em 0 0.5em 0.5em;
-  width: 70vw;
-  max-width: 370px;
-  line-height: 2.2em;
-  font-size: 1em;
+  border-radius: 0.5em;
   cursor: pointer;
+  font-size: 1em;
   font-family: inherit;
+  line-height: 2.2em;
+  margin: 1em auto;
+  outline: none;
+  padding: 0.5em 0.4em;
+  transition: 0.5s;
+  width: 90%;
+  -webkit-transition: 0.5s;
+ }
+
+@media (min-width: 35em) {
+ .signUpWrapper {
+   margin-top: 1.5rem;
+   width: 500px;
+ }
 }
