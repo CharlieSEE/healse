@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="Logo.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    id="svg6860"
    version="1.1"
    viewBox="0 0 45.499157 9.4161082"
    height="9.4161081mm"
-   width="45.499157mm">
+   width="45.499157mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs6854">
     <marker
@@ -783,23 +783,24 @@
   </defs>
   <sodipodi:namedview
      inkscape:window-maximized="1"
-     inkscape:window-y="-9"
-     inkscape:window-x="-9"
-     inkscape:window-height="1051"
-     inkscape:window-width="1920"
+     inkscape:window-y="39"
+     inkscape:window-x="7"
+     inkscape:window-height="1390"
+     inkscape:window-width="3422"
      showgrid="false"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="41.508962"
-     inkscape:cx="90.387418"
+     inkscape:cy="41.542523"
+     inkscape:cx="90.534921"
      inkscape:zoom="3.959798"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     inkscape:pagecheckerboard="0" />
   <metadata
      id="metadata6857">
     <rdf:RDF>
@@ -828,11 +829,11 @@
     <path
        id="path869"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20.8821px;line-height:1.25;font-family:Infynyte;-inkscape-font-specification:'Infynyte Light';text-align:center;letter-spacing:1.08744px;text-anchor:middle;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 22.159445,25.776478 h -5.566632 v -8.133512 c 0,-0.09139 -0.08308,-0.171351 -0.189903,-0.171351 -0.09496,0 -0.178038,0.07997 -0.178038,0.171351 v 8.304864 c 0,0.10281 0.08308,0.182775 0.178038,0.182775 h 5.756535 c 0.106823,0 0.189904,-0.07996 0.189904,-0.182775 0,-0.09139 -0.08308,-0.171352 -0.189904,-0.171352 z" />
+       d="m 29.925583,25.787901 h -5.566632 v -8.133512 c 0,-0.09139 -0.08308,-0.171351 -0.189903,-0.171351 -0.09496,0 -0.178038,0.07997 -0.178038,0.171351 v 8.304864 c 0,0.10281 0.08308,0.182775 0.178038,0.182775 h 5.756535 c 0.106823,0 0.189904,-0.07996 0.189904,-0.182775 0,-0.09139 -0.08308,-0.171352 -0.189904,-0.171352 z" />
     <path
        id="path871"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20.8821px;line-height:1.25;font-family:Infynyte;-inkscape-font-specification:'Infynyte Light';text-align:center;letter-spacing:1.08744px;text-anchor:middle;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 28.189118,17.471615 h -2.896069 c -0.890188,0 -1.614206,0.708255 -1.614206,1.565014 v 6.979742 c 0,0.102811 0.08309,0.171352 0.178036,0.171352 0.09496,0 0.178042,-0.06854 0.178042,-0.171352 v -2.650246 h 5.412324 v 2.650246 c 0,0.102811 0.08309,0.171352 0.178037,0.171352 0.09496,0 0.178042,-0.06854 0.178042,-0.171352 v -6.979742 c 0,-0.856759 -0.724018,-1.565014 -1.614206,-1.565014 z m 1.258127,5.551806 h -5.412324 v -3.986792 c 0,-0.673985 0.569718,-1.22231 1.258128,-1.22231 h 2.896069 c 0.68841,0 1.258127,0.548325 1.258127,1.22231 z" />
+       d="m 20.672701,17.471615 h -2.896069 c -0.890188,0 -1.614206,0.708255 -1.614206,1.565014 v 6.979742 c 0,0.102811 0.08309,0.171352 0.178036,0.171352 0.09496,0 0.178042,-0.06854 0.178042,-0.171352 v -2.650246 h 5.412324 v 2.650246 c 0,0.102811 0.08309,0.171352 0.178037,0.171352 0.09496,0 0.178042,-0.06854 0.178042,-0.171352 v -6.979742 c 0,-0.856759 -0.724018,-1.565014 -1.614206,-1.565014 z m 1.258127,5.551806 h -5.412324 v -3.986792 c 0,-0.673985 0.569718,-1.22231 1.258128,-1.22231 h 2.896069 c 0.68841,0 1.258127,0.548325 1.258127,1.22231 z" />
     <path
        id="path873"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20.8821px;line-height:1.25;font-family:Infynyte;-inkscape-font-specification:'Infynyte Light';text-align:center;letter-spacing:1.08744px;text-anchor:middle;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -840,6 +841,6 @@
     <path
        id="path875"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20.8821px;line-height:1.25;font-family:Infynyte;-inkscape-font-specification:'Infynyte Light';text-align:center;letter-spacing:1.08744px;text-anchor:middle;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 45.121115,17.825742 c 0.106823,0 0.178041,-0.07997 0.178041,-0.182776 0,-0.09139 -0.07122,-0.171351 -0.178041,-0.171351 h -5.768397 c -0.09496,0 -0.178042,0.07997 -0.178042,0.171351 v 8.316287 c 0,0.09138 0.08309,0.171352 0.178042,0.171352 h 5.768397 c 0.106823,0 0.178041,-0.07996 0.178041,-0.171352 0,-0.102811 -0.07122,-0.171352 -0.178041,-0.171352 h -5.590361 v -3.815439 h 4.154197 c 0.09495,0 0.178037,-0.07997 0.178037,-0.171352 0,-0.09139 -0.08308,-0.171352 -0.178037,-0.171352 h -4.154197 v -3.804016 z" />
+       d="m 45.056443,17.825742 c 0.106823,0 0.178041,-0.07997 0.178041,-0.182776 0,-0.09139 -0.07122,-0.171351 -0.178041,-0.171351 h -5.768397 c -0.09496,0 -0.178042,0.07997 -0.178042,0.171351 v 8.316287 c 0,0.09138 0.08309,0.171352 0.178042,0.171352 h 5.768397 c 0.106823,0 0.178041,-0.07996 0.178041,-0.171352 0,-0.102811 -0.07122,-0.171352 -0.178041,-0.171352 h -5.590361 v -3.815439 h 4.154197 c 0.09495,0 0.178037,-0.07997 0.178037,-0.171352 0,-0.09139 -0.08308,-0.171352 -0.178037,-0.171352 h -4.154197 v -3.804016 z" />
   </g>
 </svg>
