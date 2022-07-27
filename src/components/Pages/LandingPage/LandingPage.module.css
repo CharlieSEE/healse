@@ -1,110 +1,113 @@
 @import "../../../constants/colors.css";
 
 /* Logo anim */
-
 .landingPage {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  height: 100vh;
 }
 .section {
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-rows: 1fr;
   position: relative;
-  align-items: center;
-  display: flex;
-  flex-flow: column;
 }
 .infoWrapper {
-  display: flex;
-  flex-flow: row;
-  flex: 1 4;
-  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   padding-bottom: 5em;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+.infoElement {
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 1em;
+  box-shadow: 0 0.3em 0.2em 0.1em rgba(0, 0, 0, 0.2);
+  height: 10em;
+  margin: auto;
+  padding: 0.5em;
+  width: 90vw;
 }
 .waveDivider {
-  position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  overflow: hidden;
   line-height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 .waveDivider svg {
-  position: relative;
   display: block;
-  width: calc(127% + 1.3px);
   height: 59px;
+  position: relative;
+  width: calc(127% + 1.3px);
 }
 .waveDivider .shapeFill {
   fill: var(--secondary-color);
 }
 .title {
-  padding: 0.5em;
-  font-weight: bold;
   font-size: 36px;
+  font-weight: bold;
   line-height: 42px;
-}
-.description {
-  text-align: left;
-  padding: 1em;
-  padding-left: 2em;
-  margin-top: 5em;
-  font-size: 1em;
-  line-height: 21px;
-  width: 30vw;
-}
-.detailSection {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  padding-right: 2em;
+  padding: 0.5em;
 }
 .signingSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   background-color: var(--secondary-color);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
   padding-top: 2em;
 }
 .signingSection a {
   margin: 1.5em 0;
+  max-width: 370px;
 }
 .landingPageLogo {
-  width: 35%;
   height: 35%;
+  width: 35%;
 }
-
 .buttonSignUp,
 .buttonLogin {
-  padding: 0.1em;
-  text-align: center;
-  width: 70vw;
-  max-width: 370px;
+  cursor: pointer;
+  border: unset;
+  border-radius: 0.3em;
   font-size: 2em;
   font-family: inherit;
   font-weight: 600;
   line-height: 1.5em;
-  border-radius: 0.3em;
-  border: unset;
-  cursor: pointer;
+  max-width: 370px;
+  padding: 0.1em;
+  text-align: center;
+  width: 90vw;
 }
 .buttonLogin {
-  color: var(--secondary-text-color);
   background-color: var(--button-color);
+  color: var(--secondary-text-color);
 }
 .buttonLogin:hover {
   background-color: var(--button-color-hover);
 }
 .buttonSignUp {
-  color: var(--button-color);
   background-color: var(--secondary-color);
   border: 0.1em solid var(--button-color);
+  color: var(--button-color);
 }
 .buttonSignUp:hover {
-  color: var(--button-color-hover);
   border-color: var(--button-color-hover);
+  color: var(--button-color-hover);
 }
 @media (min-width: 50em) {
   .signingSection {
-    flex-direction: row;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .infoWrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 50vh;
+    padding: 2em 0 0;
+  }
+  .infoElement {
+    height: 30vh;
+    width: 28vw;
   }
 }

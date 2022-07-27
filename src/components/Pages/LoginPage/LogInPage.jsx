@@ -57,36 +57,37 @@ function LogInPage() {
   // };
   return (
     <div className={styles.logInPage}>
-      <h1 className={styles.logInTitle}>
-        <div>Log into your</div>
-        <div>
-          <span className={styles.blueText}> Healse </span>
-          Account
-        </div>
-      </h1>
+      <div className={styles.logInWrapper}>
+        <h1 className={styles.logInTitle}>
+          <div>Log into your</div>
+          <div>
+            <span className={styles.blueText}> Healse </span>
+            Account
+          </div>
+        </h1>
 
-      <form className={styles.logInForm} onSubmit={login}>
-        <input
-          type="email"
-          className={styles.logInInputField}
-          onChange={(e) => setUserEmail(e.target.value)}
-          value={userEmail}
-          placeholder="Email"
-        />
-        <input
-          type="password"
-          className={styles.logInInputField}
-          onChange={(e) => setUserPassword(e.target.value)}
-          value={userPassword}
-          placeholder="Password"
-        />
-        <input type="submit" value="Log in" />
-      </form>
-      {/* <button className={styles.loginProviderButton} onClick={googleLogin}>
-        <span>
-          Login with <b>Google</b>
-        </span>
-      </button> */}
+        <form className={styles.logInForm} onSubmit={login}>
+          <input
+            type="email"
+            className={styles.logInInputField}
+            onChange={(e) => setUserEmail(e.target.value)}
+            value={userEmail}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            className={styles.logInInputField}
+            onChange={(e) => setUserPassword(e.target.value)}
+            value={userPassword}
+            placeholder="Password"
+          />
+          <input type="submit" value="Log in" />
+        </form>
+      </div>      {/* <button className={styles.loginProviderButton} onClick={googleLogin}>
+                     <span>
+                     Login with <b>Google</b>
+                     </span>
+                     </button> */}
     </div>
   );
 }

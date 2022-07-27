@@ -1,15 +1,19 @@
 .button {
+  background-color: var(--button-color);
   border-radius: 0.3em;
   border: 0.1em solid var(--button-color);
-  margin-top: 2em;
-  padding: 0.1em;
-  width: 70vw;
-  max-width: 370px;
-  line-height: 1.5em;
+  color: var(--secondary-text-color);
+  cursor: pointer;
   font-size: 2em;
   font-family: inherit;
   font-weight: 600;
-  color: var(--secondary-text-color);
-  background-color: var(--button-color);
-  cursor: pointer;
+  line-height: 1.2em;
+  max-width: 370px;
+  margin: 0.5em 0;
+  padding: 0.1em;
+  width: 70vw;
+}
+.button:hover {
+  background-color: var(--button-color-hover);
+  border: 0.1em solid var(--button-color-hover);
 }
